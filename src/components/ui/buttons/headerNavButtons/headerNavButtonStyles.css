@@ -1,4 +1,23 @@
 .logo {
     height: 5em;
-    fill: '#360d3a'
+}
+
+.headerNavButtonContainer {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+button {
+    color: #e7d9fc;
+    font-size: 1em;
+    font-weight: bold;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid #e7d9fc;
+    margin: 0px 15px;
+    cursor: pointer;
+    opacity: 0.75;
+    padding: 10px 15px;
+
 }

@@ -4,7 +4,7 @@ import './headerNavButtonStyles.css'
 const HeaderNavSVG = () => {
     return (
         <div>
-            <svg className="logo" version="1.1" viewBox="0 0 131.1 166.7" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+            <svg className="logo" version="1.1" viewBox="0 0 131.1 166.7" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px" fill="#e7d9fc">
                 <path className="st0" d="M28.8,18.8c6.8,3.2,11.3,7.1,12.1,7.7c-0.3-1.8-1.7-10.3-2.6-15.5c3.9,2.7,13.3,9.2,16.3,11.3
                         C55.8,18.5,60.2,6,60.2,6s7.8,12.5,9,14.6C70.9,19,80.1,8.6,82.5,6c0.5,5.9,0.9,14.5,1.1,15.7c0.5-0.6,4.1-5.6,10-10.3
                         c-2.6,5.1-3.8,12.1-4.4,17.8c-5.9-1.7-12.1-2.6-18.4-2.6c-12.2,0-23.8,3.2-33.8,8.9C35.3,30,32.6,23.2,28.8,18.8z M122.6,126.2

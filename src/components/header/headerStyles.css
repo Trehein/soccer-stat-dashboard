@@ -1,3 +1,16 @@
 header {
-    padding: 20px
+    padding: 20px;
+    display: flex;
+    align-items: center;
 }
+
+header .title {
+    margin-left: 30px;
+    color: #e7d9fc;
+}
+
+header h1 {
+    border-bottom: 3px solid rgba(255,255,255,0.2);
+    padding-bottom: 5px;
+}
+

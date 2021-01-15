@@ -1,0 +1,15 @@
+body, ul, h2, h3, p, button, a, div{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+body {
+    background: #360d3a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #0cc991, #360d3a); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #0cc991, #360d3a); 
+}
