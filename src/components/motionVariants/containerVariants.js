@@ -13,6 +13,7 @@ export const pageContainer = {
     exit: {
         x: '-100vw',
         transition: {
+            duration: .75,
             type: 'spring'
         }
     }

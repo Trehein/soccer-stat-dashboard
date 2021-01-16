@@ -1,6 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { pageContainer } from '../motionVariants/containerVariants'
+import './Dashboard.css'
+import TopTen from './TopTen'
 
 const Dashboard = () => {
     return (
@@ -10,7 +12,7 @@ const Dashboard = () => {
             animate="visible"
             exit="exit"
         >
-            Welcome to EFL Stat Central
+            <TopTen />
         </motion.div>
     )
 }

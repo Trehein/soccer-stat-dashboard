@@ -12,6 +12,8 @@ const buttonVariant = {
         opacity: .85,
         y: 0,
         transition: {
+            delay: .75,
+            duration: 1.25,
             type: 'spring',
             stiffness: 100
         }
