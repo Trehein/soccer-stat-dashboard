@@ -1,10 +1,17 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+import { pageContainer } from '../motionVariants/containerVariants'
 
 const TeamStats = () => {
     return (
-        <div>
+        <motion.div className="pageContainer"
+            variants={pageContainer}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             TeamStats
-        </div>
+        </motion.div>
     )
 }
 

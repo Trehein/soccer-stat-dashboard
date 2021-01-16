@@ -12,4 +12,13 @@ body {
     background: #360d3a; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #0cc991, #360d3a); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #0cc991, #360d3a); 
+    min-height: 100vh;
+}
+
+.pageContainer {
+  padding: 50px;
+  width: 80%;
+  margin: auto;
+  align-content: center;
+  text-align: center;
 }

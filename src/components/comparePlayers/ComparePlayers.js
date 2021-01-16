@@ -1,10 +1,17 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+import { pageContainer } from '../motionVariants/containerVariants'
 
 const ComparePlayers = () => {
     return (
-        <div>
+        <motion.div className="pageContainer"
+            variants={pageContainer}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             Compare Players
-        </div>
+        </motion.div>
     )
 }
 
