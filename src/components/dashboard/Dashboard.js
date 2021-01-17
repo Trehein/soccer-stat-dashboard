@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { pageContainer } from '../motionVariants/containerVariants'
 import './Dashboard.css'
-import TopTen from './TopTen'
+import DashboardCardList from './DashboardCardList'
 
 const Dashboard = () => {
     return (
@@ -12,7 +12,7 @@ const Dashboard = () => {
             animate="visible"
             exit="exit"
         >
-            <TopTen />
+            <DashboardCardList />
         </motion.div>
     )
 }

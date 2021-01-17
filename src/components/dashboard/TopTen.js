@@ -5,7 +5,7 @@ import './Dashboard.css'
 
 const TopTen = () => {
     return (
-        <motion.div className="topTenContainer containerCard"
+        <motion.div className="dashCard"
         
         >
 

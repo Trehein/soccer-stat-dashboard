@@ -1,3 +1,30 @@
-.topTenContainer {
-    width: 20%;
+.dashCard {
+    height: 25vh;
+    width: 85%;
+    margin: 20px auto;
+    color: #e7d9fc;
+    font-size: 1em;
+    font-weight: bold;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid #e7d9fc;
+    padding: 20px;
+    border-radius: 15px;
+    opacity: .75;
+    cursor: pointer;
+    padding: 20px ;
+}
+
+.dashboardCardContainer {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashCardCol {
+    flex: 50%;
+    min-width: 50%;
 }
