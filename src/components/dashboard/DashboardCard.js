@@ -2,12 +2,18 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import DashIconPicker from './DashIconPicker'
 
-const DashboardCard = (props) => {
-    const card = props.card
+const DashboardCard = ({ card, setShowDashModal, setModalContent }) => {
+    function modalSetter () {
+        setModalContent(card.title)
+        setShowDashModal(true)
+    } 
+
     return (
         <motion.div className="dashCard"
+            onClick={ modalSetter }
             whileHover={{        
                 scale: 1.05, 
+                opacity: 1,
                 textShadow: "0px 0px 4px rgb(255,255,255)",
                 boxShadow: "0px 0px 8px rgb(255,255,255)"
             }}

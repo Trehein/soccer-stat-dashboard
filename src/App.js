@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
           <Route exact path="/">
             <Dashboard />

@@ -5,7 +5,6 @@ export const pageContainer = {
     visible: {
         x: 0,
         transition: {
-            delay: 1,
             duration: .75,
             type: 'spring'
         }
@@ -18,4 +17,6 @@ export const pageContainer = {
         }
     }
 }
+
+
 
