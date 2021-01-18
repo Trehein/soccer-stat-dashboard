@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Switch, useLocation } from "react-router-dom";
 import './App.css'
 import Header from './components/header/Header'
@@ -8,17 +8,30 @@ import TeamStats from './components/teamStats/TeamStats'
 import ComparePlayers from './components/comparePlayers/ComparePlayers'
 import CompareTeams from './components/compareTeams/CompareTeams'
 import { AnimatePresence } from 'framer-motion'
+import Modal from './components/modal/Modal'
+
 
 function App() {
+  const [showModal, setShowModal] = useState(false)
+  const [modalContent, setModalContent] = useState(null)
+
   const location = useLocation()
   
   return (
     <div className="app">
       <Header />
+      <Modal 
+        showModal={showModal} 
+        setShowModal={setShowModal}  
+        modalContent={modalContent}
+      /> 
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
           <Route exact path="/">
-            <Dashboard />
+            <Dashboard 
+              setModalContent={setModalContent} 
+              setShowModal={setShowModal}
+            />
           </Route>
           <Route path="/playerStats">
             <PlayerStats />

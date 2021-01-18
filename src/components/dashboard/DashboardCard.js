@@ -2,10 +2,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import DashIconPicker from './DashIconPicker'
 
-const DashboardCard = ({ card, setShowDashModal, setModalContent }) => {
+const DashboardCard = ({ card, setShowModal, setModalContent }) => {
     function modalSetter () {
         setModalContent(card.title)
-        setShowDashModal(true)
+        setShowModal(true)
     } 
 
     return (

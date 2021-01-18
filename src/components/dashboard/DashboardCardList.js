@@ -17,14 +17,14 @@ const dashCardData = [
     }
 ]
 
-const DashboardCardList = ({ setShowDashModal, setModalContent }) => {
+const DashboardCardList = ({ setShowModal, setModalContent }) => {
     return (
         <div className="dashboardCardContainer">
             { dashCardData.map(card => (
                 <div className="dashCardCol" key={card.title}>
                     <DashboardCard 
                         card={card} 
-                        setShowDashModal={setShowDashModal} 
+                        setShowModal={setShowModal} 
                         setModalContent={setModalContent} 
                     />
                 </div>

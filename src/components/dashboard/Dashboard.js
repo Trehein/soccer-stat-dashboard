@@ -1,13 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { pageContainer } from '../motionVariants/containerVariants'
 import './Dashboard.css'
 import DashboardCardList from './DashboardCardList'
-import DashModal from './dashModals/DashModal'
 
-const Dashboard = () => {
-    const [showDashModal, setShowDashModal] = useState(true)
-    const [modalContent, setModalContent] = useState(null)
+const Dashboard = ({ setModalContent, setShowModal }) => {
 
     return (
         <motion.div className="pageContainer"
@@ -16,12 +13,8 @@ const Dashboard = () => {
             animate="visible"
             exit="exit"
         >
-            <DashModal 
-                showDashModal={showDashModal} 
-                modalContent={modalContent}
-            />
             <DashboardCardList 
-                setShowDashModal={setShowDashModal}
+                setShowModal={setShowModal}
                 setModalContent={setModalContent}
             />
         </motion.div>
