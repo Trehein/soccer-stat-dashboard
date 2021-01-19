@@ -1,30 +1,34 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import TopTenModal from './dashModals/topTenModal/TopTenModal'
+import ComparePlayersModal from './dashModals/comparePlayersModal/ComparePlayersModal'
+import TeamStatsModal from './dashModals/teamStatsModal/TeamStatsModal'
+import CompareTeamsModal from './dashModals/compareTeamsModal/CompareTeamsModal'
 
 const ModalSwitch = ({ modalContent }) => {
     switch (modalContent) {
-        case "Top Ten Players":
+        case "top10":
             return (
                 <motion.div>
-
+                    <TopTenModal />
                 </motion.div>
             )
-        case "Compare Players":
+        case "comparePlayers":
             return (
                 <motion.div>
-                    
+                    <ComparePlayersModal />
                 </motion.div>
             )
-        case "Team Stats":
+        case "teamStats":
             return (
                 <motion.div>
-                    
+                    <TeamStatsModal />
                 </motion.div>
             )
-        case "Compare Teams":
+        case "compareTeams":
             return (
                 <motion.div>
-                    
+                    <CompareTeamsModal />
                 </motion.div>
             )
         default:

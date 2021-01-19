@@ -4,7 +4,7 @@ import DashIconPicker from './DashIconPicker'
 
 const DashboardCard = ({ card, setShowModal, setModalContent }) => {
     function modalSetter () {
-        setModalContent(card.title)
+        setModalContent(card.id)
         setShowModal(true)
     } 
 
