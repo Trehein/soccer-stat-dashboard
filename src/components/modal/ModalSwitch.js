@@ -5,30 +5,30 @@ import ComparePlayersModal from './dashModals/comparePlayersModal/ComparePlayers
 import TeamStatsModal from './dashModals/teamStatsModal/TeamStatsModal'
 import CompareTeamsModal from './dashModals/compareTeamsModal/CompareTeamsModal'
 
-const ModalSwitch = ({ modalContent }) => {
+const ModalSwitch = ({ modalContent, setShowModal }) => {
     switch (modalContent) {
         case "top10":
             return (
                 <motion.div>
-                    <TopTenModal />
+                    <TopTenModal setShowModal={setShowModal} />
                 </motion.div>
             )
         case "comparePlayers":
             return (
                 <motion.div>
-                    <ComparePlayersModal />
+                    <ComparePlayersModal setShowModal={setShowModal} />
                 </motion.div>
             )
         case "teamStats":
             return (
                 <motion.div>
-                    <TeamStatsModal />
+                    <TeamStatsModal setShowModal={setShowModal} />
                 </motion.div>
             )
         case "compareTeams":
             return (
                 <motion.div>
-                    <CompareTeamsModal />
+                    <CompareTeamsModal setShowModal={setShowModal} />
                 </motion.div>
             )
         default:
