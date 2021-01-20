@@ -1,14 +1,25 @@
 import React from 'react'
-import { GiConsoleController } from 'react-icons/gi';
 import allPlayerStats from '../../../../datasets/allPlayersStats.json'
 
 const topTen = allPlayerStats.sort((a, b) => { return a.totalPts < b.totalPts ? 1 : -1; }).slice(0, 10)
 
-console.log(topTen)
-
 const TopTenContent = () => {
     return (
-        <div></div>
+        <>
+            <div className="modalContentContainer">
+                <div className="topTenListContainer">
+                    { topTen.map(player => {
+                        return (
+                            <div key={player.name}>
+                                <h4>
+                                    {player.name}
+                                </h4>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+        </>
     )
 }
 
