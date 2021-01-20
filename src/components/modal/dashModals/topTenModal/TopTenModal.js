@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { IconContext } from 'react-icons'
 import { FaArrowRight } from 'react-icons/fa'
 import { modalLinkButton } from '../../../motionVariants/buttonVariants'
+import TopTenContent from './TopTenContent'
 
 const TopTenModal = ({ setShowModal }) => {
     return (
@@ -25,6 +26,7 @@ const TopTenModal = ({ setShowModal }) => {
                     </Link>
                 </div>
             </div>
+            <TopTenContent />
         </motion.div>
     )
 }

@@ -10,7 +10,6 @@ import CompareTeams from './components/compareTeams/CompareTeams'
 import { AnimatePresence } from 'framer-motion'
 import Modal from './components/modal/Modal'
 
-
 function App() {
   const [showModal, setShowModal] = useState(false)
   const [modalContent, setModalContent] = useState(null)
