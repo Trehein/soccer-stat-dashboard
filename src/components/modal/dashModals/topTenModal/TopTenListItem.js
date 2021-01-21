@@ -10,6 +10,23 @@ const TopTenListItem = ({player}) => {
                     {player.name}
                 </h5>
             </div>
+            <div className="topTenListStatContainer">
+                <div className="topTenStatBox">
+                    <h5>
+                        {player.totalPTS}
+                    </h5>
+                </div>
+                <div className="topTenStatBox">
+                    <h5>
+                        {player.totalGS}
+                    </h5>
+                </div>
+                <div className="topTenStatBox">
+                    <h5>
+                        {player.totalA}
+                    </h5>
+                </div>
+            </div>
         </li>
     )
 }
