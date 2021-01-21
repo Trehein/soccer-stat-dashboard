@@ -1,9 +1,8 @@
-body, ul, h2, h3, h4, p, button, a, div{
+body, ul, h2, h3, h4, h5, p, button, a, div{
     margin: 0;
     padding: 0;
     /* color: white; */
     font-family: 'Open Sans', sans-serif;
-    letter-spacing: 2px;
     list-style-type: none;
     text-decoration: none;
   }
@@ -102,3 +101,16 @@ body {
     margin: 15vh auto;
 }
 
+.topTenHeader {
+  color: black;
+  text-align: center;
+}
+
+.topTenListRow {
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
+  padding: 5px;
+  border-bottom: 1px solid rgba(50,50,50,0.5);
+}
