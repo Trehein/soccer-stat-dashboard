@@ -174,3 +174,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
 }
+
+.topTenLIContainer {
+  cursor: pointer;
+}
