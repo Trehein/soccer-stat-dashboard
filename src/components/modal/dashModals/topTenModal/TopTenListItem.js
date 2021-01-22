@@ -4,11 +4,13 @@ import ClubLogoPicker from '../../../../utils/ClubLogoPicker'
 const TopTenListItem = ({player}) => {
     return (
         <li className="topTenListRow">
-            <ClubLogoPicker player={player} />
-            <div className="topTenListName">
-                <h5>
-                    {player.name}
-                </h5>
+            <div className="halfBox">
+                <ClubLogoPicker player={player} />
+                <div className="topTenListName">
+                    <h5>
+                        {player.name}
+                    </h5>
+                </div>
             </div>
             <div className="topTenListStatContainer">
                 <div className="topTenStatBox">

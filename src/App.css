@@ -121,7 +121,7 @@ body {
 
 .topTenListName {
   padding: 0px 5px;
-  width: 40%;
+  width: 80%;
 }
 
 .topTenTitleNameContainer {
@@ -137,7 +137,7 @@ body {
 }
 
 .topTenListStatContainer {
-  width: 49%;
+  width: 50%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -153,9 +153,9 @@ body {
 }
 
 .topTenStatTitleBox {
-  width: 31.5%;
+  width: 30%;
   text-align: center;
-  border-left: 1px dotted rgba(50,50,50,0.5);
+  margin: 0px auto;
 }
 
 .h3Underline {
@@ -166,4 +166,11 @@ body {
 .h3Underline > h3 {
   border-bottom: 2px solid rgba(50,50,50,0.5);
   padding-bottom: 5px;
+}
+
+.halfBox {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
