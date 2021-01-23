@@ -2,8 +2,9 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import TopTenListItem from './TopTenListItem'
 import { topTenContainer } from '../../../motionVariants/topTenContainerVariants'
+import { topTenListVariants } from '../../../motionVariants/topTenListVariants'
 
-const TopTenList = ({ topTen }) => {
+const TopTenList = ({ topTen, setDisplayPlayer }) => {
     return (
         <div className="topTenListContainer">
             <div className="topTenHeader">
@@ -36,19 +37,19 @@ const TopTenList = ({ topTen }) => {
                     </div>
                 </div>
             </div>
-            <ul>
+            <motion.ul variants={topTenListVariants}>
                 { topTen.map(player => {
                     return (
-                        <motion.div className="topTenLIContainer"
+                        <motion.div className="topTenLIContainer" key={player.name}
                             variants={topTenContainer}
                             whileHover="hover"
                             cursor="pointer"
                         >
-                            <TopTenListItem player={player} key={player.name}/>
+                            <TopTenListItem player={player} key={player.name} setDisplayPlayer={setDisplayPlayer} />
                         </motion.div>
                     )
                 })}
-            </ul>
+            </motion.ul>
         </div>
     )
 }

@@ -21,7 +21,8 @@
         "totalC": 371.1,
         "totalT": 790,
         "totalICT": 192.4,
-        "matches": [{
+        "matches": [
+          {
                 "match": 1,
                 "opp": "EVE (H) 0 - 1",
                 "pts": 2,

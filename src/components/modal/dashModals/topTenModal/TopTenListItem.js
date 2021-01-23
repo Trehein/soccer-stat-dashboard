@@ -1,9 +1,13 @@
 import React from 'react'
 import ClubLogoPicker from '../../../../utils/ClubLogoPicker'
 
-const TopTenListItem = ({player}) => {
+const TopTenListItem = ({ player, setDisplayPlayer }) => {
+    function handlePlayerSet () {
+        setDisplayPlayer(player)
+    }
+
     return (
-        <li className="topTenListRow">
+        <li className="topTenListRow" onClick={ handlePlayerSet }>
             <div className="halfBox">
                 <ClubLogoPicker player={player} />
                 <div className="topTenListName">
