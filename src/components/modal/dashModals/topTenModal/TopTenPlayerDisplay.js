@@ -1,9 +1,10 @@
 import React from 'react'
+import PlayerImgPicker from '../../../../utils/PlayerImgPicker'
 
 const TopTenPlayerDisplay = ({player}) => {
     return (
         <div className="playerDisplayContainer" >
-            {player.name}
+            <PlayerImgPicker player={player} />
         </div>
     )
 }
