@@ -1,5 +1,5 @@
 .topTenListContainer {
-    width: 40%;
+    width: 42%;
     height: 100%;
     padding: 15px;
     text-align: left;
@@ -14,11 +14,6 @@
     width: 25px;
     height: 25px;
 }
-
-/* .playerDisplayClubLogo {
-    width: 30px;
-    height: 
-} */
 
 .topTenHeader {
   color: black;
@@ -108,6 +103,7 @@
 
 .playerDisplayHeader {
     width: 100%;
+    margin: 5px 0px;
 }
 
 .playerDisplayContainer {
@@ -123,3 +119,56 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+.positionDisplayBox {
+  width: 100%;
+  margin: 0px;
+}
+
+.GKP {
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(right,#ffd200 20%,  #ECFF00, #acff00 80%);
+  background: -moz-linear-gradient(right, #ffd200 20%,  #ECFF00, #acff00 80%);
+  background: linear-gradient(to right, #474c00 5%,  #a5b300, #ECFF00 95%);
+  margin: 0px;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  color: white;
+  cursor: default;
+}
+
+.FWD {
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(right, #cc2c64 5%, #ff377d, #ff73a4 95%);
+  background: -moz-linear-gradient(right, #cc2c64 5%, #ff377d, #ff73a4 95%);
+  background: linear-gradient(to right, #cc2c64 5%, #ff377d, #ff73a4 95%);
+  margin: 0px;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  color: white;
+  cursor: default;
+}
+
+.MID {
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(right, #06b2ff 20%, #06F0FF, #06ffd0 80%);
+  background: -moz-linear-gradient(right, #06b2ff 20%, #06F0FF, #06ffd0 80%);
+  background: linear-gradient(to right, rgba(13,71,161 ,1) 5%, rgba(33,150,243 ,1), #6af6ff 95%);
+  margin: 0px;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  color: white;
+  cursor: default;
+}
+
+.DEF {
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(right, #FFFFFF, #00FF88);
+  background: -moz-linear-gradient(right, #FFFFFF, #00FF88);
+  background: linear-gradient(to right, #004c29 5%, #00b35f, #00FF88 95%);
+  margin: 0px;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  color: white;
+  cursor: default;
+}

@@ -1,7 +1,6 @@
 import React from 'react'
 import PlayerImgPicker from '../../../../utils/PlayerImgPicker'
-import ClubLogoPicker from '../../../../utils/ClubLogoPicker'
-
+import PositionDisplay from './PositionDisplay'
 
 const TopTenPlayerDisplay = ({player}) => {
     return (
@@ -11,8 +10,9 @@ const TopTenPlayerDisplay = ({player}) => {
             </div>
             <div className="playerDisplayStatContainer">
                 <div className="playerDisplayHeader">
-                    <ClubLogoPicker player={player} />
+                    <h2>{player.name}</h2>
                 </div>
+                <PositionDisplay player={player} />
             </div>
         </div>
     )
