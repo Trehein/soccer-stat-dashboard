@@ -5,6 +5,7 @@ import { IconContext } from 'react-icons'
 import { FaArrowRight } from 'react-icons/fa'
 import { modalLinkButton } from '../../../motionVariants/buttonVariants'
 import TopTenContent from './TopTenContent'
+import './TopTen.css'
 
 const TopTenModal = ({ setShowModal }) => {
     return (
