@@ -51,10 +51,11 @@
 }
 
 .topTenListStatContainer {
-  width: 50%;
+  width: 49%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding-right: 3px;
 }
 
 .topTenStatBox {
@@ -101,16 +102,18 @@
     width: 50%;
 }
 
-.playerDisplayHeader {
+.fullRow {
     width: 100%;
     margin: 5px 0px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .playerDisplayContainer {
     width: 40%;
     height: 100%;
     padding: 15px;
-    text-align: left;
+    /* text-align: left; */
     background-color: white;
     border-radius: 10px;
     border: 1px solid #bdbdbd;
@@ -118,23 +121,33 @@
     margin: 5vh auto;
     display: flex;
     flex-wrap: wrap;
+    text-align: left;
   }
 
 .positionDisplayBox {
-  width: 100%;
-  margin: 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.clubDisplayBox {
+  text-align: left;
+  padding: 5px 0px;
+}
+
+.clubDisplayBox > h4 {
+  color: rgb(58, 58, 58);
 }
 
 .GKP {
   background: #FFFFFF;
   background: -webkit-linear-gradient(right,#ffd200 20%,  #ECFF00, #acff00 80%);
   background: -moz-linear-gradient(right, #ffd200 20%,  #ECFF00, #acff00 80%);
-  background: linear-gradient(to right, #474c00 5%,  #a5b300, #ECFF00 95%);
+  background: linear-gradient(to right, #b89c00 5%,  #eede02, #ECFF00 95%);
   margin: 0px;
   border: 2px solid #FFFFFF;
   border-radius: 10px;
-  color: white;
+  color: black;
   cursor: default;
+  padding: 5px 5px;
 }
 
 .FWD {
@@ -147,6 +160,7 @@
   border-radius: 10px;
   color: white;
   cursor: default;
+  padding: 5px 5px;
 }
 
 .MID {
@@ -159,6 +173,7 @@
   border-radius: 10px;
   color: white;
   cursor: default;
+  padding: 5px 5px;
 }
 
 .DEF {
@@ -171,4 +186,5 @@
   border-radius: 10px;
   color: white;
   cursor: default;
+  padding: 5px 5px;
 }

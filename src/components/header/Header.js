@@ -1,7 +1,7 @@
 import React from 'react'
 import './headerStyles.css'
-import HeaderNavSVG from '../ui/buttons/headerNavButtons/HeaderNavSVG'
-import HeaderNavButtonList from '../ui/buttons/headerNavButtons/HeaderNavButtonList'
+import HeaderNavSVG from './HeaderNavSVG'
+import HeaderNavButtonList from './HeaderNavButtonList'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 

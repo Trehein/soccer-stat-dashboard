@@ -1,6 +1,7 @@
 import React from 'react'
 import PlayerImgPicker from '../../../../utils/PlayerImgPicker'
 import PositionDisplay from './PositionDisplay'
+import ClubDisplay from './ClubDisplay'
 
 const TopTenPlayerDisplay = ({player}) => {
     return (
@@ -9,10 +10,13 @@ const TopTenPlayerDisplay = ({player}) => {
                 <PlayerImgPicker player={player} />
             </div>
             <div className="playerDisplayStatContainer">
-                <div className="playerDisplayHeader">
+                <div className="fullRow">
                     <h2>{player.name}</h2>
+                    <PositionDisplay player={player} />
                 </div>
-                <PositionDisplay player={player} />
+                <div className="fullRow">
+                    <ClubDisplay player={player} />
+                </div>
             </div>
         </div>
     )
