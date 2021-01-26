@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { motion, AnimateSharedLayout } from 'framer-motion'
+import { AnimateSharedLayout } from 'framer-motion'
 import AtkTable from './AtkTable'
 import TeamTable from './TeamTable'
 import DefTable from './DefTable'
@@ -29,12 +29,14 @@ const DisplayStatContainer = ({player}) => {
                 />
                 <DefTable 
                     player={player} 
+                    setTeamTable={setTeamTable}
                     setDefTable={setDefTable} 
                     setDiscTable={setDiscTable} 
                     defTable={defTable} />
                 <DiscTable 
                     player={player} 
                     setDefTable={setDefTable} 
+                    setDiscTable={setDiscTable}
                     discTable={discTable} />
             </ul>
         </AnimateSharedLayout>

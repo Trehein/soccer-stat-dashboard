@@ -10,22 +10,37 @@ const AtkTable = ({ player, setTeamTable, atkTable, setAtkTable }) => {
         setTeamTable(true)
     }
 
-    console.log(atkTable)
-
-    return (
-        <li>
-            { atkTable && (
-                <motion.div layoutId="onTable">
-                    <p>AtkTable</p>
-                    <div onClick={ nextTable } className="changeTableButton">
-                        <IconContext.Provider value={{ size: '1.5em', style: { verticalAlign: 'middle' }}}>
-                            <BiRightArrowCircle />
-                        </IconContext.Provider>
-                    </div>
-                </motion.div>
-            )}
-        </li>
-    )
+    if(player.position === "GKP") {
+        return (
+            <li>
+                { atkTable && (
+                    <motion.div layoutId="onTable">
+                        <p>GKP 1st table</p>
+                        <div onClick={ nextTable } className="changeTableButton">
+                            <IconContext.Provider value={{ size: '1.5em', style: { verticalAlign: 'middle' }}}>
+                                <BiRightArrowCircle />
+                            </IconContext.Provider>
+                        </div>
+                    </motion.div>
+                )}
+            </li>
+        )
+    } else {
+        return (
+            <li>
+                { atkTable && (
+                    <motion.div layoutId="onTable">
+                        <p>AtkTable</p>
+                        <div onClick={ nextTable } className="changeTableButton">
+                            <IconContext.Provider value={{ size: '1.5em', style: { verticalAlign: 'middle' }}}>
+                                <BiRightArrowCircle />
+                            </IconContext.Provider>
+                        </div>
+                    </motion.div>
+                )}
+            </li>
+        )
+    }
 }
 
 export default AtkTable
