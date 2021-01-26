@@ -99,7 +99,9 @@
 }
 
 .playerDisplayStatContainer {
-    width: 50%;
+    width: 45%;
+    margin: 0px auto;
+    padding: 0px 10px;
 }
 
 .fullRow {
@@ -107,6 +109,7 @@
     margin: 5px 0px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .playerDisplayContainer {
@@ -125,7 +128,7 @@
   }
 
 .positionDisplayBox {
-  margin: 0px 0px 0px 0px;
+  margin: 0px auto;
 }
 
 .clubDisplayBox {
@@ -137,30 +140,32 @@
   color: rgb(58, 58, 58);
 }
 
+.positionDisplayBox > button {
+  margin: 0px;
+  border: 2px solid #FFFFFF;
+  border-radius: 25px;
+  color: white;
+  cursor: default;
+  padding: 5px 10px;
+  font-size: 1em;
+  font-weight: 90;
+}
+
 .GKP {
   background: #FFFFFF;
   background: -webkit-linear-gradient(right,#ffd200 20%,  #ECFF00, #acff00 80%);
   background: -moz-linear-gradient(right, #ffd200 20%,  #ECFF00, #acff00 80%);
   background: linear-gradient(to right, #b89c00 5%,  #eede02, #ECFF00 95%);
-  margin: 0px;
-  border: 2px solid #FFFFFF;
-  border-radius: 10px;
   color: black;
-  cursor: default;
-  padding: 5px 5px;
+
 }
 
 .FWD {
   background: #FFFFFF;
   background: -webkit-linear-gradient(right, #cc2c64 5%, #ff377d, #ff73a4 95%);
   background: -moz-linear-gradient(right, #cc2c64 5%, #ff377d, #ff73a4 95%);
-  background: linear-gradient(to right, #cc2c64 5%, #ff377d, #ff73a4 95%);
-  margin: 0px;
-  border: 2px solid #FFFFFF;
-  border-radius: 10px;
-  color: white;
-  cursor: default;
-  padding: 5px 5px;
+  background: linear-gradient(to right, #8a1e44 5%, #ff377d, #ff95ba 95%);
+
 }
 
 .MID {
@@ -168,12 +173,7 @@
   background: -webkit-linear-gradient(right, #06b2ff 20%, #06F0FF, #06ffd0 80%);
   background: -moz-linear-gradient(right, #06b2ff 20%, #06F0FF, #06ffd0 80%);
   background: linear-gradient(to right, rgba(13,71,161 ,1) 5%, rgba(33,150,243 ,1), #6af6ff 95%);
-  margin: 0px;
-  border: 2px solid #FFFFFF;
-  border-radius: 10px;
-  color: white;
-  cursor: default;
-  padding: 5px 5px;
+
 }
 
 .DEF {
@@ -181,10 +181,14 @@
   background: -webkit-linear-gradient(right, #FFFFFF, #00FF88);
   background: -moz-linear-gradient(right, #FFFFFF, #00FF88);
   background: linear-gradient(to right, #004c29 5%, #00b35f, #00FF88 95%);
-  margin: 0px;
-  border: 2px solid #FFFFFF;
-  border-radius: 10px;
-  color: white;
-  cursor: default;
-  padding: 5px 5px;
+}
+
+.displayStatTable {
+  width: 100%;
+  padding: 5px 10px;
+  height: 20px;
+}
+
+.changeTableButton {
+  cursor: pointer;
 }
