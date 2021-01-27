@@ -95,7 +95,7 @@
 }
 
 .playerDisplayImgContainer {
-    width: 35%;
+    width: 37.5%;
 }
 
 .playerDisplayImgContainer > img {
@@ -103,9 +103,8 @@
 }
 
 .playerDisplayStatContainer {
-    width: 55%;
+    width: 60%;
     margin: 0px auto;
-    padding: 0px 10px;
 }
 
 .fullRow {
@@ -119,7 +118,7 @@
 .playerDisplayContainer {
     width: 45%;
     height: 100%;
-    padding: 15px;
+    padding: 5px;
     /* text-align: left; */
     background-color: white;
     border-radius: 10px;
@@ -189,10 +188,22 @@
 
 .displayStatTable {
   width: 100%;
-  padding: 5px 10px;
-  height: 20px;
+  height: 100%;
+}
+
+.changeTableButtonContainer {
+  padding: 0px 5px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .changeTableButton {
   cursor: pointer;
+}
+
+.tableHeaderRow {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }

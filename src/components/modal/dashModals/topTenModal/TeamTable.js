@@ -18,16 +18,20 @@ const TeamTable = ({ player, teamTable, setAtkTable, setDefTable, setTeamTable }
         <li>
             { teamTable && (
                 <motion.div layoutId="onTable">
-                    <p>TeamTable</p>
-                    <div onClick={ prevTable } className="changeTableButton">
-                        <IconContext.Provider value={{ size: '1.5em', style: { verticalAlign: 'middle' }}}>
-                            <BiLeftArrowCircle />
-                        </IconContext.Provider>
-                    </div>
-                    <div onClick={ nextTable } className="changeTableButton">
-                        <IconContext.Provider value={{ size: '1.5em', style: { verticalAlign: 'middle' }}}>
-                            <BiRightArrowCircle />
-                        </IconContext.Provider>
+                    <div className="tableHeaderRow">
+                        <p>Team Play</p>
+                        <div className="changeTableButtonContainer">
+                            <div onClick={ prevTable } className="changeTableButton">
+                                <IconContext.Provider value={{ size: '1.5em', style: { verticalAlign: 'middle' }}}>
+                                    <BiLeftArrowCircle />
+                                </IconContext.Provider>
+                            </div>
+                            <div onClick={ nextTable } className="changeTableButton">
+                                <IconContext.Provider value={{ size: '1.5em', style: { verticalAlign: 'middle' }}}>
+                                    <BiRightArrowCircle />
+                                </IconContext.Provider>
+                            </div>
+                        </div>
                     </div>
                 </motion.div>
             )}

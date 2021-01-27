@@ -13,7 +13,7 @@ const TopTenContent = () => {
     const topTen = sortPlayers(allPlayerStats)
     const [displayPlayer, setDisplayPlayer] = useState(sortPlayers(allPlayerStats)[0])
 
-    console.log(sortPlayers(allPlayerStats)[0])
+    // console.log(sortPlayers(allPlayerStats)[0])
 
     return (
         <>

@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { IconContext } from 'react-icons'
 import { BiRightArrowCircle } from 'react-icons/bi'
+import { statTableVariants } from '../../../motionVariants/statTableVariants'
 
 
 const AtkTable = ({ player, setTeamTable, atkTable, setAtkTable }) => {
@@ -14,12 +15,18 @@ const AtkTable = ({ player, setTeamTable, atkTable, setAtkTable }) => {
         return (
             <li>
                 { atkTable && (
-                    <motion.div layoutId="onTable">
-                        <p>GKP 1st table</p>
-                        <div onClick={ nextTable } className="changeTableButton">
-                            <IconContext.Provider value={{ size: '1.5em', style: { verticalAlign: 'middle' }}}>
-                                <BiRightArrowCircle />
-                            </IconContext.Provider>
+                    <motion.div layoutId="onTable"
+                    
+                    >
+                        <div className="tableHeaderRow">
+                            <h4>Goalkeeping</h4>
+                            <div className="changeTableButtonContainer">
+                                <div onClick={ nextTable } className="changeTableButton">
+                                    <IconContext.Provider value={{ size: '1.5em', style: { verticalAlign: 'middle' }}}>
+                                        <BiRightArrowCircle />
+                                    </IconContext.Provider>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 )}
@@ -29,12 +36,21 @@ const AtkTable = ({ player, setTeamTable, atkTable, setAtkTable }) => {
         return (
             <li>
                 { atkTable && (
-                    <motion.div layoutId="onTable">
-                        <p>AtkTable</p>
-                        <div onClick={ nextTable } className="changeTableButton">
-                            <IconContext.Provider value={{ size: '1.5em', style: { verticalAlign: 'middle' }}}>
-                                <BiRightArrowCircle />
-                            </IconContext.Provider>
+                    <motion.div layoutId="onTable"
+                        variants={statTableVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                    >
+                        <div className="tableHeaderRow">
+                            <h4>Attacking</h4>
+                            <div className="changeTableButtonContainer">
+                                <div onClick={ nextTable } className="changeTableButton">
+                                    <IconContext.Provider value={{ size: '1.5em', style: { verticalAlign: 'middle' }}}>
+                                        <BiRightArrowCircle />
+                                    </IconContext.Provider>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 )}
