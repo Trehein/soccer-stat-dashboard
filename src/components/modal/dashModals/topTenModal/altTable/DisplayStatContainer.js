@@ -1,9 +1,33 @@
 import React, { useState } from 'react'
-import { AnimateSharedLayout, AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import AtkTable from './AtkTable'
 import TeamTable from './TeamTable'
 import DefTable from './DefTable'
 import DiscTable from './DiscTable'
+
+const tableVariants = {
+    hidden: {
+        opacity: 0,
+        y: 400,
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.5,
+            duration: .75,
+            type: 'spring'
+        }
+    },
+    exit: {
+        opacity: 0,
+        y: -400,
+        transition: {
+            duration: .75,
+            type: 'spring'
+        }
+    }
+}
 
 const DisplayStatContainer = ({player}) => {
     const [atkTable, setAtkTable] = useState(true);
@@ -13,26 +37,44 @@ const DisplayStatContainer = ({player}) => {
 
     return (
         <div>
+            <div className="tableHeaderRow">
+                <div onClick={() => { setDiscTable(false); setTeamTable(false); setDefTable(false); setAtkTable(true) }} className="tableTab">
+                    { player.position === "GKP" && (
+                        <h4>GKP</h4>
+                    )}
+                    { player.position !== "GKP" && (
+                        <h4>ATK</h4>
+                    )}
+                </div>
+                <div onClick={() => { setDiscTable(false); setDefTable(false); setAtkTable(false); setTeamTable(true) }} className="tableTab">
+                    <h4>TEAM</h4>
+                </div>
+                <div onClick={() => { setDiscTable(false); setAtkTable(false); setTeamTable(false); setDefTable(true) }} className="tableTab">
+                    <h4>DEF</h4>
+                </div>
+                <div onClick={() => { setAtkTable(false); setTeamTable(false); setDefTable(false); setDiscTable(true) }} className="tableTab">
+                    <h4>DISC</h4>
+                </div>
+            </div>
             <AnimatePresence exitBeforeEnter>
                 { atkTable && (
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                        variants={tableVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
                     >
                         <AtkTable player={player} setAtkTable={setAtkTable} setDiscTable={setDiscTable} setTeamTable={setTeamTable} />
-                        {/* <h5>AtkTable</h5>
-                        <p onClick={() => { setAtkTable(false); setTeamTable(true) }}>next</p>
-                        <p onClick={() => { setAtkTable(false); setDiscTable(true) }}>prev</p> */}
                     </motion.div>
                 )}
             </AnimatePresence>
             <AnimatePresence exitBeforeEnter>
                 { teamTable && (
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                        variants={tableVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
                     >
                         <h5>TeamTable</h5>
                         <p onClick={() => { setTeamTable(false); setDefTable(true) }}>next</p>
@@ -43,9 +85,10 @@ const DisplayStatContainer = ({player}) => {
             <AnimatePresence exitBeforeEnter>
                 { defTable && (
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                        variants={tableVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
                     >
                         <h5>DefTable</h5>
                         <p onClick={() => { setDefTable(false); setDiscTable(true) }}>next</p>
@@ -56,9 +99,10 @@ const DisplayStatContainer = ({player}) => {
             <AnimatePresence exitBeforeEnter>
                 { discTable && (
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                        variants={tableVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
                     >
                         <h5>DiscTable</h5>
                         <p onClick={() => { setDiscTable(false); setAtkTable(true) }}>next</p>
