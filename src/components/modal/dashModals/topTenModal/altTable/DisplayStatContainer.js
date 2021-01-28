@@ -9,22 +9,22 @@ import ShotsTable from './ShotsTable'
 const tableVariants = {
     hidden: {
         opacity: 0,
-        y: 75,
+        // y: -50,
     },
     visible: {
         opacity: 1,
-        y: 0,
+        // y: 0,
         transition: {
-            delay: 0.5,
+            delay: 1,
             duration: .75,
             type: 'spring'
         }
     },
     exit: {
         opacity: 0,
-        y: 75,
+        // y: -50,
         transition: {
-            duration: .75,
+            duration: .25,
             type: 'spring'
         }
     }
@@ -89,7 +89,7 @@ const DisplayStatContainer = ({player}) => {
                         animate="visible"
                         exit="exit"
                     >
-                        <ShotsTable player={player} />
+                        <ShotsTable shotsStats={player.shots} />
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -101,7 +101,7 @@ const DisplayStatContainer = ({player}) => {
                         animate="visible"
                         exit="exit"
                     >
-                        <TeamTable player={player} />
+                        <TeamTable teamStats={player.team} />
                     </motion.div>
                 )}
             </AnimatePresence>
