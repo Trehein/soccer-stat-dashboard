@@ -21,6 +21,40 @@
         "totalC": 371.1,
         "totalT": 790,
         "totalICT": 192.4,
+        "atk": {     
+          "g": 12,
+          "gpm": 0.67,
+          "head": 3,
+          "gwrf": 7,
+          "gwlf": 2,
+          "pens": 3,
+          "fks": 0,
+          "shots": 69,
+          "shotsOT": 26,
+          "shotPerc": 38,
+          "hitWood": 2,
+          "bigMid": 5
+        },
+        "team": {
+          "assists": 11,
+          "passes": 465,
+          "passesPerM": 25.83,
+          "bigChanceCreate": 12,
+          "crosses": 14
+        },
+        "def": {
+          "Tackles": 11,
+          "Blocked shots": 14,
+          "Interceptions": 8,
+          "Clearances": 28,
+          "Headed Clearance": 26
+        },
+        "disc": {
+          "yc": 1,
+          "rc": 0,
+          "fouls": 21,
+          "offsides": 5
+        },
         "matches": [
           {
                 "match": 1,
@@ -460,6 +494,40 @@
         "totalC": 494.7,
         "totalT": 598,
         "totalICT": 173.5,
+        "atk": {     
+          "g": 12,
+          "gpm": 0.67,
+          "head": 3,
+          "gwrf": 7,
+          "gwlf": 2,
+          "pens": 3,
+          "fks": 0,
+          "shots": 69,
+          "shotsOT": 26,
+          "shotPerc": 38,
+          "hitWood": 2,
+          "bigMid": 5
+        },
+        "team": {
+          "assists": 11,
+          "passes": 465,
+          "passesPerM": 25.83,
+          "bigChanceCreate": 12,
+          "crosses": 14
+        },
+        "def": {
+          "Tackles": 11,
+          "Blocked shots": 14,
+          "Interceptions": 8,
+          "Clearances": 28,
+          "Headed Clearance": 26
+        },
+        "disc": {
+          "yc": 1,
+          "rc": 0,
+          "fouls": 21,
+          "offsides": 5
+        },
         "matches": [
             {
                 "match": 1,
@@ -899,6 +967,40 @@
         "totalC": 784.9,
         "totalT": 649.0,
         "totalICT": 218.0,
+        "atk": {     
+          "g": 12,
+          "gpm": 0.67,
+          "head": 3,
+          "gwrf": 7,
+          "gwlf": 2,
+          "pens": 3,
+          "fks": 0,
+          "shots": 69,
+          "shotsOT": 26,
+          "shotPerc": 38,
+          "hitWood": 2,
+          "bigMid": 5
+        },
+        "team": {
+          "assists": 11,
+          "passes": 465,
+          "passesPerM": 25.83,
+          "bigChanceCreate": 12,
+          "crosses": 14
+        },
+        "def": {
+          "Tackles": 11,
+          "Blocked shots": 14,
+          "Interceptions": 8,
+          "Clearances": 28,
+          "Headed Clearance": 26
+        },
+        "disc": {
+          "yc": 1,
+          "rc": 0,
+          "fouls": 21,
+          "offsides": 5
+        },
         "matches": [
             {
                 "match": 1,
@@ -1338,6 +1440,40 @@
         "totalC": 426.4,
         "totalT": 849.0,
         "totalICT": 188.6,
+        "atk": {     
+          "g": 12,
+          "gpm": 0.67,
+          "head": 3,
+          "gwrf": 7,
+          "gwlf": 2,
+          "pens": 3,
+          "fks": 0,
+          "shots": 69,
+          "shotsOT": 26,
+          "shotPerc": 38,
+          "hitWood": 2,
+          "bigMid": 5
+        },
+        "team": {
+          "assists": 11,
+          "passes": 465,
+          "passesPerM": 25.83,
+          "bigChanceCreate": 12,
+          "crosses": 14
+        },
+        "def": {
+          "Tackles": 11,
+          "Blocked shots": 14,
+          "Interceptions": 8,
+          "Clearances": 28,
+          "Headed Clearance": 26
+        },
+        "disc": {
+          "yc": 1,
+          "rc": 0,
+          "fouls": 21,
+          "offsides": 5
+        },
         "matches": [
             {
                 "match": 1,
@@ -1800,6 +1936,40 @@
         "totalC": 183.3,
         "totalT": 762.0,
         "totalICT": 147.4,
+        "atk": {     
+          "g": 12,
+          "gpm": 0.67,
+          "head": 3,
+          "gwrf": 7,
+          "gwlf": 2,
+          "pens": 3,
+          "fks": 0,
+          "shots": 69,
+          "shotsOT": 26,
+          "shotPerc": 38,
+          "hitWood": 2,
+          "bigMid": 5
+        },
+        "team": {
+          "assists": 11,
+          "passes": 465,
+          "passesPerM": 25.83,
+          "bigChanceCreate": 12,
+          "crosses": 14
+        },
+        "def": {
+          "Tackles": 11,
+          "Blocked shots": 14,
+          "Interceptions": 8,
+          "Clearances": 28,
+          "Headed Clearance": 26
+        },
+        "disc": {
+          "yc": 1,
+          "rc": 0,
+          "fouls": 21,
+          "offsides": 5
+        },
         "matches": [
             {
                 "match": 1,
@@ -2262,6 +2432,40 @@
         "totalC": 123.6,
         "totalT": 870.0,
         "totalICT": 142.9,
+        "atk": {     
+          "g": 12,
+          "gpm": 0.67,
+          "head": 3,
+          "gwrf": 7,
+          "gwlf": 2,
+          "pens": 3,
+          "fks": 0,
+          "shots": 69,
+          "shotsOT": 26,
+          "shotPerc": 38,
+          "hitWood": 2,
+          "bigMid": 5
+        },
+        "team": {
+          "assists": 11,
+          "passes": 465,
+          "passesPerM": 25.83,
+          "bigChanceCreate": 12,
+          "crosses": 14
+        },
+        "def": {
+          "Tackles": 11,
+          "Blocked shots": 14,
+          "Interceptions": 8,
+          "Clearances": 28,
+          "Headed Clearance": 26
+        },
+        "disc": {
+          "yc": 1,
+          "rc": 0,
+          "fouls": 21,
+          "offsides": 5
+        },
         "matches": [
             {
                 "match": 1,
@@ -2701,6 +2905,40 @@
         "totalC": 700.6,
         "totalT": 724.0,
         "totalICT": 192.5,
+        "atk": {     
+          "g": 12,
+          "gpm": 0.67,
+          "head": 3,
+          "gwrf": 7,
+          "gwlf": 2,
+          "pens": 3,
+          "fks": 0,
+          "shots": 69,
+          "shotsOT": 26,
+          "shotPerc": 38,
+          "hitWood": 2,
+          "bigMid": 5
+        },
+        "team": {
+          "assists": 11,
+          "passes": 465,
+          "passesPerM": 25.83,
+          "bigChanceCreate": 12,
+          "crosses": 14
+        },
+        "def": {
+          "Tackles": 11,
+          "Blocked shots": 14,
+          "Interceptions": 8,
+          "Clearances": 28,
+          "Headed Clearance": 26
+        },
+        "disc": {
+          "yc": 1,
+          "rc": 0,
+          "fouls": 21,
+          "offsides": 5
+        },
         "matches": [
             {
                 "match": 1,
@@ -3117,6 +3355,40 @@
         "totalC": 145.7,
         "totalT": 772,
         "totalICT": 137.3,
+        "atk": {     
+          "g": 12,
+          "gpm": 0.67,
+          "head": 3,
+          "gwrf": 7,
+          "gwlf": 2,
+          "pens": 3,
+          "fks": 0,
+          "shots": 69,
+          "shotsOT": 26,
+          "shotPerc": 38,
+          "hitWood": 2,
+          "bigMid": 5
+        },
+        "team": {
+          "assists": 11,
+          "passes": 465,
+          "passesPerM": 25.83,
+          "bigChanceCreate": 12,
+          "crosses": 14
+        },
+        "def": {
+          "Tackles": 11,
+          "Blocked shots": 14,
+          "Interceptions": 8,
+          "Clearances": 28,
+          "Headed Clearance": 26
+        },
+        "disc": {
+          "yc": 1,
+          "rc": 0,
+          "fouls": 21,
+          "offsides": 5
+        },
         "matches": [
             {
                 "match": 1,
@@ -3533,6 +3805,40 @@
         "totalC": 756.4,
         "totalT": 636.0,
         "totalICT": 189.9,
+        "atk": {     
+          "g": 12,
+          "gpm": 0.67,
+          "head": 3,
+          "gwrf": 7,
+          "gwlf": 2,
+          "pens": 3,
+          "fks": 0,
+          "shots": 69,
+          "shotsOT": 26,
+          "shotPerc": 38,
+          "hitWood": 2,
+          "bigMid": 5
+        },
+        "team": {
+          "assists": 11,
+          "passes": 465,
+          "passesPerM": 25.83,
+          "bigChanceCreate": 12,
+          "crosses": 14
+        },
+        "def": {
+          "Tackles": 11,
+          "Blocked shots": 14,
+          "Interceptions": 8,
+          "Clearances": 28,
+          "Headed Clearance": 26
+        },
+        "disc": {
+          "yc": 1,
+          "rc": 0,
+          "fouls": 21,
+          "offsides": 5
+        },
         "matches": [
             {
                 "match": 1,
@@ -3972,6 +4278,40 @@
         "totalC": 232.5,
         "totalT": 643.0,
         "totalICT": 125.2	,
+        "atk": {     
+          "g": 12,
+          "gpm": 0.67,
+          "head": 3,
+          "gwrf": 7,
+          "gwlf": 2,
+          "pens": 3,
+          "fks": 0,
+          "shots": 69,
+          "shotsOT": 26,
+          "shotPerc": 38,
+          "hitWood": 2,
+          "bigMid": 5
+        },
+        "team": {
+          "assists": 11,
+          "passes": 465,
+          "passesPerM": 25.83,
+          "bigChanceCreate": 12,
+          "crosses": 14
+        },
+        "def": {
+          "Tackles": 11,
+          "Blocked shots": 14,
+          "Interceptions": 8,
+          "Clearances": 28,
+          "Headed Clearance": 26
+        },
+        "disc": {
+          "yc": 1,
+          "rc": 0,
+          "fouls": 21,
+          "offsides": 5
+        },
         "matches": [
             {
                 "match": 1,
@@ -4434,6 +4774,40 @@
         "totalC": 317.9,
         "totalT": 631.0,
         "totalICT": 139.4,
+        "atk": {     
+          "g": 12,
+          "gpm": 0.67,
+          "head": 3,
+          "gwrf": 7,
+          "gwlf": 2,
+          "pens": 3,
+          "fks": 0,
+          "shots": 69,
+          "shotsOT": 26,
+          "shotPerc": 38,
+          "hitWood": 2,
+          "bigMid": 5
+        },
+        "team": {
+          "assists": 11,
+          "passes": 465,
+          "passesPerM": 25.83,
+          "bigChanceCreate": 12,
+          "crosses": 14
+        },
+        "def": {
+          "Tackles": 11,
+          "Blocked shots": 14,
+          "Interceptions": 8,
+          "Clearances": 28,
+          "Headed Clearance": 26
+        },
+        "disc": {
+          "yc": 1,
+          "rc": 0,
+          "fouls": 21,
+          "offsides": 5
+        },
         "matches": [
             {
                 "match": 1,
@@ -4896,6 +5270,40 @@
         "totalC": 182.7,
         "totalT": 489,
         "totalICT": 104,
+        "atk": {     
+          "g": 12,
+          "gpm": 0.67,
+          "head": 3,
+          "gwrf": 7,
+          "gwlf": 2,
+          "pens": 3,
+          "fks": 0,
+          "shots": 69,
+          "shotsOT": 26,
+          "shotPerc": 38,
+          "hitWood": 2,
+          "bigMid": 5
+        },
+        "team": {
+          "assists": 11,
+          "passes": 465,
+          "passesPerM": 25.83,
+          "bigChanceCreate": 12,
+          "crosses": 14
+        },
+        "def": {
+          "Tackles": 11,
+          "Blocked shots": 14,
+          "Interceptions": 8,
+          "Clearances": 28,
+          "Headed Clearance": 26
+        },
+        "disc": {
+          "yc": 1,
+          "rc": 0,
+          "fouls": 21,
+          "offsides": 5
+        },
         "matches": [
             {
                 "match": 1,

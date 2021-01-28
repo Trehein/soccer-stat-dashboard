@@ -1,7 +1,6 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 
-const DiscTable = () => {
+const DiscTable = ({ player }) => {
     return (
         <div>
 

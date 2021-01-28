@@ -1,10 +1,9 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 
-const TeamTable = () => {
+const TeamTable = ({ player }) => {
     return (
         <div>
-            TeamTable
+            <h4>Team</h4>
         </div>
     )
 }

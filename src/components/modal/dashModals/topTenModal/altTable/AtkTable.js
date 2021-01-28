@@ -1,6 +1,13 @@
 import React from 'react'
 
 const AtkTable = ({ player }) => {
+    const atkStats = getAtkStats(player)
+
+    function getAtkStats (player) {
+        return {
+            
+        }
+    }
 
     return (
         <div>

@@ -1,7 +1,6 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 
-const DefTable = () => {
+const DefTable = ({ player }) => {
     return (
         <div>
 
