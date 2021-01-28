@@ -45,11 +45,11 @@
           "crosses": 14
         },
         "def": {
-          "Tackles": 11,
+          "tackles": 11,
           "Blocked shots": 14,
-          "Interceptions": 8,
-          "Clearances": 28,
-          "Headed Clearance": 26
+          "interceptions": 8,
+          "clearances": 28,
+          "headedClearance": 26
         },
         "disc": {
           "yc": 1,
@@ -520,11 +520,11 @@
           "crosses": 78
         },
         "def": {
-          "Tackles": 12,
+          "tackles": 12,
           "Blocked shots": 8,
-          "Interceptions": 7,
-          "Clearances": 1,
-          "Headed Clearance": 1
+          "interceptions": 7,
+          "clearances": 1,
+          "headedClearance": 1
         },
         "disc": {
           "yc": 0,
@@ -995,11 +995,11 @@
           "crosses": 93
         },
         "def": {
-          "Tackles": 35,
+          "tackles": 35,
           "Blocked shots": 23,
-          "Interceptions": 16,
-          "Clearances": 15,
-          "Headed Clearance": 9
+          "interceptions": 16,
+          "clearances": 15,
+          "headedClearance": 9
         },
         "disc": {
           "yc": 4,
@@ -1470,11 +1470,11 @@
           "crosses": 11
         },
         "def": {
-          "Tackles": 13,
+          "tackles": 13,
           "Blocked shots": 15,
-          "Interceptions": 0,
-          "Clearances": 5,
-          "Headed Clearance": 2
+          "interceptions": 0,
+          "clearances": 5,
+          "headedClearance": 2
         },
         "disc": {
           "yc": 0,
@@ -1968,11 +1968,11 @@
           "crosses": 10
         },
         "def": {
-          "Tackles": 8,
+          "tackles": 8,
           "Blocked shots": 9,
-          "Interceptions": 2,
-          "Clearances": 18,
-          "Headed Clearance": 10
+          "interceptions": 2,
+          "clearances": 18,
+          "headedClearance": 10
         },
         "disc": {
           "yc": 1,
@@ -2466,11 +2466,11 @@
           "crosses": 2
         },
         "def": {
-          "Tackles": 10,
+          "tackles": 10,
           "Blocked shots": 12,
-          "Interceptions": 3,
-          "Clearances": 16,
-          "Headed Clearance": 12
+          "interceptions": 3,
+          "clearances": 16,
+          "headedClearance": 12
         },
         "disc": {
           "yc": 1,
@@ -2941,11 +2941,11 @@
           "crosses": 60
         },
         "def": {
-          "Tackles": 24,
+          "tackles": 24,
           "Blocked shots": 20,
-          "Interceptions": 10,
-          "Clearances": 1,
-          "Headed Clearance": 0
+          "interceptions": 10,
+          "clearances": 1,
+          "headedClearance": 0
         },
         "disc": {
           "yc": 4,
@@ -3393,11 +3393,11 @@
           "crosses": 5
         },
         "def": {
-          "Tackles": 9,
+          "tackles": 9,
           "Blocked shots": 7,
-          "Interceptions": 6,
-          "Clearances": 12,
-          "Headed Clearance": 10
+          "interceptions": 6,
+          "clearances": 12,
+          "headedClearance": 10
         },
         "disc": {
           "yc": 3,
@@ -3845,11 +3845,11 @@
           "crosses": 111
         },
         "def": {
-          "Tackles": 27,
+          "tackles": 27,
           "Blocked shots": 22,
-          "Interceptions": 7,
-          "Clearances": 6,
-          "Headed Clearance": 5
+          "interceptions": 7,
+          "clearances": 6,
+          "headedClearance": 5
         },
         "disc": {
           "yc": 1,
@@ -4320,11 +4320,11 @@
           "crosses": 21
         },
         "def": {
-          "Tackles": 10,
+          "tackles": 10,
           "Blocked shots": 13,
-          "Interceptions": 5,
-          "Clearances": 1,
-          "Headed Clearance": 0
+          "interceptions": 5,
+          "clearances": 1,
+          "headedClearance": 0
         },
         "disc": {
           "yc": 3,
@@ -4818,11 +4818,11 @@
           "crosses": 12
         },
         "def": {
-          "Tackles": 6,
+          "tackles": 6,
           "Blocked shots": 12,
-          "Interceptions": 5,
-          "Clearances": 7,
-          "Headed Clearance": 5
+          "interceptions": 5,
+          "clearances": 7,
+          "headedClearance": 5
         },
         "disc": {
           "yc": 3,
@@ -5316,11 +5316,11 @@
           "crosses": 9
         },
         "def": {
-          "Tackles": 7,
+          "tackles": 7,
           "Blocked shots": 6,
-          "Interceptions": 6,
-          "Clearances": 9,
-          "Headed Clearance": 6
+          "interceptions": 6,
+          "clearances": 9,
+          "headedClearance": 6
         },
         "disc": {
           "yc": 2,

@@ -9,22 +9,23 @@ import ShotsTable from './ShotsTable'
 const tableVariants = {
     hidden: {
         opacity: 0,
-        // y: -50,
+        y: 150,
     },
     visible: {
         opacity: 1,
-        // y: 0,
+        y: 0,
         transition: {
-            delay: 1,
+            delay: .5,
             duration: .75,
-            type: 'spring'
+            type: 'easeIn'
         }
     },
     exit: {
         opacity: 0,
-        // y: -50,
+        y: 150,
         transition: {
-            duration: .25,
+            // delay: .25,
+            duration: .75,
             type: 'spring'
         }
     }
@@ -113,7 +114,7 @@ const DisplayStatContainer = ({player}) => {
                         animate="visible"
                         exit="exit"
                     >
-                        <DefTable player={player} />
+                        <DefTable defStats={player.def} />
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -125,7 +126,7 @@ const DisplayStatContainer = ({player}) => {
                         animate="visible"
                         exit="exit"
                     >
-                        <DiscTable player={player} />
+                        <DiscTable discStats={player.disc} />
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const TeamTable = ({ teamStats }) => {
-    console.log(teamStats)
+    // console.log(teamStats)
     return (
         <div className="tableContainer">
             <div className="tableStatBox">
