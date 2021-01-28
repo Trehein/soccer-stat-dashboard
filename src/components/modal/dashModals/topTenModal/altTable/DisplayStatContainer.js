@@ -4,6 +4,7 @@ import AtkTable from './AtkTable'
 import TeamTable from './TeamTable'
 import DefTable from './DefTable'
 import DiscTable from './DiscTable'
+import ShotsTable from './ShotsTable'
 
 const tableVariants = {
     hidden: {
@@ -31,14 +32,23 @@ const tableVariants = {
 
 const DisplayStatContainer = ({player}) => {
     const [atkTable, setAtkTable] = useState(true);
+    const [shotsTable, setShotsTable] = useState(false);
     const [teamTable, setTeamTable] = useState(false);
     const [defTable, setDefTable] = useState(false);
     const [discTable, setDiscTable] = useState(false);
 
+    function tableReset () {
+        setDiscTable(false); 
+        setTeamTable(false); 
+        setDefTable(false); 
+        setAtkTable(false);
+        setShotsTable(false);
+    }
+
     return (
         <div>
             <div className="tableHeaderRow">
-                <div onClick={() => { setDiscTable(false); setTeamTable(false); setDefTable(false); setAtkTable(true) }} className="tableTab">
+                <div className="tableTab" onClick={() => { tableReset(); setAtkTable(true) }}>
                     { player.position === "GKP" && (
                         <h4>GKP</h4>
                     )}
@@ -46,13 +56,16 @@ const DisplayStatContainer = ({player}) => {
                         <h4>ATK</h4>
                     )}
                 </div>
-                <div onClick={() => { setDiscTable(false); setDefTable(false); setAtkTable(false); setTeamTable(true) }} className="tableTab">
+                <div className="tableTab" onClick={() => { tableReset(); setShotsTable(true) }}>
+                    <h4>SHOTS</h4>
+                </div>
+                <div className="tableTab" onClick={() => { tableReset(); setTeamTable(true) }}>
                     <h4>TEAM</h4>
                 </div>
-                <div onClick={() => { setDiscTable(false); setAtkTable(false); setTeamTable(false); setDefTable(true) }} className="tableTab">
+                <div className="tableTab" onClick={() => { tableReset(); setDefTable(true) }}>
                     <h4>DEF</h4>
                 </div>
-                <div onClick={() => { setAtkTable(false); setTeamTable(false); setDefTable(false); setDiscTable(true) }} className="tableTab">
+                <div className="tableTab" onClick={() => { tableReset(); setDiscTable(true) }}>
                     <h4>DISC</h4>
                 </div>
             </div>
@@ -65,6 +78,18 @@ const DisplayStatContainer = ({player}) => {
                         exit="exit"
                     >
                         <AtkTable player={player} />
+                    </motion.div>
+                )}
+            </AnimatePresence>
+            <AnimatePresence exitBeforeEnter>
+                { shotsTable && (
+                    <motion.div
+                        variants={tableVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                    >
+                        <ShotsTable player={player} />
                     </motion.div>
                 )}
             </AnimatePresence>

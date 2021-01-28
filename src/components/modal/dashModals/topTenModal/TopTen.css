@@ -208,6 +208,45 @@
   align-items: center;
 }
 
-.tableHeaderTabs {
+.tableTab {
+  width: 20%;
+  cursor: pointer;
+}
+
+.tableTab > h4 {
+  font-size: .85em;
+  text-align: center;
+}
+
+.tableContainer {
+  width: 90%;
+  margin: 5px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tableStatBox {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .90em;
+  align-items: center;
+  border-bottom: 1px solid rgba(50,50,50,0.5);
+  padding: 3px 0px;
+}
+
+.tableStatNumBox > h5 {
+  border-left: 1px dotted rgba(50,50,50,0.5);
+  border-right: 1px dotted rgba(50,50,50,0.5);
+}
+
+.tableStatTitleBox {
+  width: 67%;
+
+}
+
+.tableStatNumBox {
+  width: 33%;
 
 }
