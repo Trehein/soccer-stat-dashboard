@@ -9,7 +9,7 @@ import ShotsTable from './ShotsTable'
 const tableVariants = {
     hidden: {
         opacity: 0,
-        y: 150,
+        y: 120,
     },
     visible: {
         opacity: 1,
@@ -22,9 +22,8 @@ const tableVariants = {
     },
     exit: {
         opacity: 0,
-        y: 150,
+        y: 120,
         transition: {
-            // delay: .25,
             duration: .75,
             type: 'spring'
         }
@@ -49,26 +48,56 @@ const DisplayStatContainer = ({player}) => {
     return (
         <div>
             <div className="tableHeaderRow">
-                <div className="tableTab" onClick={() => { tableReset(); setAtkTable(true) }}>
+                <motion.div className="tableTab" 
+                    onClick={() => { tableReset(); setAtkTable(true) }}
+                    whileHover={{ backgroundColor: "rgba(245,0,87 ,1)", boxShadow: "0px 0px 8px rgb(0,0,0)" }}
+                    animate={
+                        atkTable ? { backgroundColor: "rgba(245,0,87 ,1)", boxShadow: "0px 0px 8px rgb(0,0,0)", color: "rgb(255,255,255)" } : { boxShadow: "0px 0px 0px rgb(255,255,255)", backgroundColor: "rgb(255,255,255)", color: "rgb(0,0,0)" }
+                    }
+                >
                     { player.position === "GKP" && (
                         <h4>GKP</h4>
                     )}
                     { player.position !== "GKP" && (
                         <h4>ATK</h4>
                     )}
-                </div>
-                <div className="tableTab" onClick={() => { tableReset(); setShotsTable(true) }}>
+                </motion.div>
+                <motion.div className="tableTab" 
+                    onClick={() => { tableReset(); setShotsTable(true) }}
+                    whileHover={{ backgroundColor: "rgba(213,0,249 ,1)", boxShadow: "0px 0px 8px rgb(0,0,0)" }}
+                    animate={
+                        shotsTable ? { backgroundColor: "rgba(213,0,249 ,1)", boxShadow: "0px 0px 8px rgb(0,0,0)", color: "rgb(255,255,255)" } : { boxShadow: "0px 0px 0px rgb(255,255,255)", backgroundColor: "rgb(255,255,255)", color: "rgb(0,0,0)" }
+                    }
+                >
                     <h4>SHOTS</h4>
-                </div>
-                <div className="tableTab" onClick={() => { tableReset(); setTeamTable(true) }}>
+                </motion.div>
+                <motion.div className="tableTab"
+                    onClick={() => { tableReset(); setTeamTable(true) }}
+                    whileHover={{ backgroundColor: "rgba(48,79,254 ,1)", boxShadow: "0px 0px 8px rgb(0,0,0)" }}
+                    animate={
+                        teamTable ? { backgroundColor: "rgba(48,79,254 ,1)", boxShadow: "0px 0px 8px rgb(0,0,0)", color: "rgb(255,255,255)" } : { boxShadow: "0px 0px 0px rgb(255,255,255)", backgroundColor: "rgb(255,255,255)", color: "rgb(0,0,0)" }
+                    }
+                >
                     <h4>TEAM</h4>
-                </div>
-                <div className="tableTab" onClick={() => { tableReset(); setDefTable(true) }}>
+                </motion.div>
+                <motion.div className="tableTab"
+                    onClick={() => { tableReset(); setDefTable(true) }}
+                    whileHover={{ backgroundColor: "rgba(0,200,83 ,1)", boxShadow: "0px 0px 8px rgb(0,0,0)" }}
+                    animate={
+                        defTable ? { backgroundColor: "rgba(0,200,83 ,1)", boxShadow: "0px 0px 8px rgb(0,0,0)", color: "rgb(255,255,255)" } : { boxShadow: "0px 0px 0px rgb(255,255,255)", backgroundColor: "rgb(255,255,255)", color: "rgb(0,0,0)" }
+                    }
+                >
                     <h4>DEF</h4>
-                </div>
-                <div className="tableTab" onClick={() => { tableReset(); setDiscTable(true) }}>
+                </motion.div>
+                <motion.div className="tableTab" 
+                    onClick={() => { tableReset(); setDiscTable(true) }}
+                    whileHover={{ backgroundColor: "rgba(255,171,0 ,1)", boxShadow: "0px 0px 8px rgb(0,0,0)" }}
+                    animate={
+                        discTable ? { backgroundColor: "rgba(255,171,0 ,1)", boxShadow: "0px 0px 8px rgb(0,0,0)", color: "rgb(255,255,255)" } : { boxShadow: "0px 0px 0px rgb(255,255,255)", backgroundColor: "rgb(255,255,255)", color: "rgb(0,0,0)" }
+                    }
+                >
                     <h4>DISC</h4>
-                </div>
+                </motion.div>
             </div>
             <AnimatePresence exitBeforeEnter>
                 { atkTable && (

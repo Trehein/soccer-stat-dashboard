@@ -203,14 +203,20 @@
 
 .tableHeaderRow {
   width: 100%;
+  margin: 5px 0px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding: 5px 0px;
+  border-top: 1px solid rgb(110,110,110);
+  border-bottom: 1px solid rgb(110,110,110);
 }
 
 .tableTab {
-  width: 20%;
+  width: 17%;
   cursor: pointer;
+  padding: 2px;
+  margin: 0px 1px;
 }
 
 .tableTab > h4 {
