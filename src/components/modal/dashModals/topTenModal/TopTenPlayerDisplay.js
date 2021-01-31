@@ -2,7 +2,6 @@ import React from 'react'
 import PlayerImgPicker from '../../../../utils/PlayerImgPicker'
 import PositionDisplay from './PositionDisplay'
 import ClubDisplay from './ClubDisplay'
-// import DisplayStatContainer from './DisplayStatContainer'
 import DisplayStatContainer from './altTable/DisplayStatContainer'
 
 const TopTenPlayerDisplay = ({player}) => {

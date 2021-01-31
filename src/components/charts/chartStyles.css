@@ -1,0 +1,25 @@
+.TopTenCompareLine {
+    height: 500px;
+    min-width: 500px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.playerLine {
+    fill: none;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+.domain {
+    /* display: none; */
+}
+
+.tick line {
+    opacity: .8;
+    stroke: #bbbbbb;
+}
+
+.tick text {
+    fill: #565656;
+}
