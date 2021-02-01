@@ -15,12 +15,12 @@ const TopTenCompareLineChart = ({ players, ptsExtent }) => {
     const innerWidth = dimensions.width - dimensions.marginLeft - dimensions.marginRight
 
     const yScale = scaleLinear()
-        .domain([ptsExtent[1], ptsExtent[0]])
+        .domain([ptsExtent[1] + 1, ptsExtent[0]])
         .range([0, innerHeight])
         .nice()
 
     const yAxisScale = scaleLinear()
-        .domain([ptsExtent[0], ptsExtent[1]])
+        .domain([ptsExtent[0], ptsExtent[1] + 1])
         .range([innerHeight, 0])
         .nice()
 
@@ -43,6 +43,9 @@ const TopTenCompareLineChart = ({ players, ptsExtent }) => {
                         <path key={player.name} className="playerLine" d={lineGenerator(player.matches)} />
                     )
                 })}
+                <text>Top Ten Point Scorers</text>
+                <text font-size="1.25em" transform={`translate(-35, ${innerHeight/2}) rotate(-90)`} text-anchor="middle">Points</text>
+                <text font-size="1.25em" transform={`translate(${innerWidth/2}, ${innerHeight + 40})`} text-anchor="middle">Match</text>
             </Chart>
         </div>
     )
