@@ -1,6 +1,6 @@
 import React from 'react'
 import allPlayerStats from '../../../../datasets/allPlayersStats.json'
-import { extent, min, max } from 'd3'
+import { extent } from 'd3'
 import TopTenCompareLineChart from '../../../charts/TopTenCompareLineChart'
 
 function sortPlayers (allPlayerStats) {
@@ -9,9 +9,10 @@ function sortPlayers (allPlayerStats) {
     )
 }
 
+const ptsAccessor = d => d.pts
+
 function calcPtsExtent (topTen) {
     const ptsExtent = [0, 0]
-
     topTen.map(player => {
         let playerExt = extent(player.matches, ptsAccessor)
         if (ptsExtent[0] > playerExt[0]) {
@@ -19,14 +20,12 @@ function calcPtsExtent (topTen) {
         } else if (playerExt[1] > ptsExtent[1]) {
             ptsExtent[1] = playerExt[1]
         }
+        return null
     })
-
     return (
         ptsExtent
     )
 }
-
-const ptsAccessor = d => d.pts
 
 const ComparePlayersContent = () => {
     const topTen = sortPlayers(allPlayerStats)
