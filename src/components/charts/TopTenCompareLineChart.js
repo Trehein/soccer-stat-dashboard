@@ -43,9 +43,9 @@ const TopTenCompareLineChart = ({ players, ptsExtent }) => {
                         <path key={player.name} className="playerLine" d={lineGenerator(player.matches)} />
                     )
                 })}
-                <text>Top Ten Point Scorers</text>
-                <text font-size="1.25em" transform={`translate(-35, ${innerHeight/2}) rotate(-90)`} text-anchor="middle">Points</text>
-                <text font-size="1.25em" transform={`translate(${innerWidth/2}, ${innerHeight + 40})`} text-anchor="middle">Match</text>
+                <text fontSize="1.5em" fontWeight="bold" transform={`translate(5, -15)`}  textAnchor="left">Top Point Scorers</text>
+                <text fontSize="1.25em" transform={`translate(-35, ${innerHeight/2}) rotate(-90)`} textAnchor="middle">Points</text>
+                <text fontSize="1.25em" transform={`translate(${innerWidth/2}, ${innerHeight + 40})`} textAnchor="middle">Match</text>
             </Chart>
         </div>
     )

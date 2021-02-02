@@ -2,6 +2,8 @@ import React from 'react'
 import allPlayerStats from '../../../../datasets/allPlayersStats.json'
 import { extent } from 'd3'
 import TopTenCompareLineChart from '../../../charts/TopTenCompareLineChart'
+import './ComparePlayers.css'
+import ComparePlayersList from './ComparePlayersList'
 
 function sortPlayers (allPlayerStats) {
     return (
@@ -32,7 +34,12 @@ const ComparePlayersContent = () => {
     const ptsExtent = calcPtsExtent(topTen)
 
     return (
-        <TopTenCompareLineChart players={topTen} ptsExtent={ptsExtent} />
+        <div className="modalContentContainer">
+            <div className="compareModalInner">
+                <ComparePlayersList players={topTen} />
+                <TopTenCompareLineChart players={topTen} ptsExtent={ptsExtent} />
+            </div>
+        </div>
     )
 }
 

@@ -1,6 +1,7 @@
 .TopTenCompareLine {
-    height: 500px;
+    height: 415px;
     min-width: 500px;
+    width: 75%;
     flex: 1;
     overflow: hidden;
 }

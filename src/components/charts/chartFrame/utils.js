@@ -27,9 +27,9 @@ export const dimensionsPropsType = (
 export const combineChartDimensions = dimensions => {
   let parsedDimensions = {
     marginTop: 40,
-    marginRight: 20,
-    marginBottom: 60,
-    marginLeft: 75,
+    marginRight: 10,
+    marginBottom: 45,
+    marginLeft: 65,
     ...dimensions,
   }
 
