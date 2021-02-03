@@ -48,8 +48,9 @@
 }
 
 .headerStatContainer {
-    width: 35%;
+    width: 30%;
     text-align: center;
+    margin-left: 9px;
 }
 
 .h3Underline {
@@ -76,3 +77,47 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.comparePlayerLIContainer {
+    width: 100%;
+    cursor: pointer;
+}
+
+.playerListRow {
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid rgba(50,50,50,0.5);
+}
+
+.nameBox { 
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.playerName {
+    width: 75%;
+    margin-left: 5px;
+    padding-right: 2px;
+}
+
+.statCheckContainer {
+    width: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.statBox {
+    width: 66%;
+    float: left;
+    text-align: center;
+}
+
+.statBox > h5 {
+    border-left: 1px dotted rgba(50,50,50,0.5);
+  }
