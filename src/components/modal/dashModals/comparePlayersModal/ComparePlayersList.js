@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import ComparePlayersLI from './ComparePlayersLI'
 
-const ComparePlayersList = ({ players }) => {
+const ComparePlayersList = ({ players, onPlayers, setOnPlayers }) => {
     return (
         <div className="comparePlayersListContainer">
             <div className="compareListHeader">
@@ -28,7 +28,7 @@ const ComparePlayersList = ({ players }) => {
                             cursor="pointer"
                             whileHover={{ scale: 1.05, boxShadow:"0px 0px 8px rgb(0,0,0)" }}    
                         >
-                            <ComparePlayersLI player={player} index={index} />
+                            <ComparePlayersLI player={player} onPlayers={onPlayers} setOnPlayers={setOnPlayers} index={index} />
                         </motion.div>
                     )
                 })}

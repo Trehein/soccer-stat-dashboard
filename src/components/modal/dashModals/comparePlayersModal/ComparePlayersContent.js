@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import allPlayerStats from '../../../../datasets/allPlayersStats.json'
 import { extent } from 'd3'
 import TopTenCompareLineChart from '../../../charts/TopTenCompareLineChart'
@@ -30,13 +30,15 @@ function calcPtsExtent (topTen) {
 }
 
 const ComparePlayersContent = () => {
+    const [onPlayers, setOnPlayers] = useState([true, false, false, false, false, false, false, false, false, false])
     const topTen = sortPlayers(allPlayerStats)
     const ptsExtent = calcPtsExtent(topTen)
+    console.log(onPlayers)
 
     return (
         <div className="modalContentContainer">
             <div className="compareModalInner">
-                <ComparePlayersList players={topTen} />
+                <ComparePlayersList players={topTen} onPlayers={onPlayers} setOnPlayers={setOnPlayers} />
                 <TopTenCompareLineChart players={topTen} ptsExtent={ptsExtent} />
             </div>
         </div>

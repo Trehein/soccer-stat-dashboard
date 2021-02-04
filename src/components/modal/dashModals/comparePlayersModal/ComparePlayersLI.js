@@ -1,10 +1,22 @@
 import React from 'react'
 import ClubLogoPicker from '../../../../utils/ClubLogoPicker'
 
-const ComparePlayersLI = ({ player, index }) => {
-    console.log(index)
-    return (
-        <li className="playerListRow">
+const ComparePlayersLI = ({ player, onPlayers, setOnPlayers, index }) => {
+
+    function handlePlayerSet () {
+        let items = [...onPlayers]
+        let item = items[index]
+        function itemSwitch (item) {
+            return (
+                item ? item = false : item = true
+            )
+        }
+        items[index] = itemSwitch(item);
+        setOnPlayers(items)
+    }
+
+return (
+        <li className="playerListRow" onClick={ handlePlayerSet }>
             <div className="nameBox">
                 <ClubLogoPicker player={player} />
                 <div className="playerName">
