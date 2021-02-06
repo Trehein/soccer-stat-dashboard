@@ -31,6 +31,7 @@ function calcPtsExtent (topTen) {
 
 const ComparePlayersContent = () => {
     const [onPlayers, setOnPlayers] = useState([true, false, false, true, false, false, false, false, false, false])
+    const colors = ["rgba(63,81,181,1)", "rgba(233,30,99,1)", "rgba(76,175,80,1)", "rgba(255,87,34,1)", "rgba(0,188,212,1)", "rgba(255,193,7,1)", "rgba(103,58,183,1)", "rgba(205,220,57,1)", "rgba(33,150,243,1)", "rgba(33,33,33 ,1)"]
     const topTen = sortPlayers(allPlayerStats)
     const ptsExtent = calcPtsExtent(topTen)
     // console.log(onPlayers)
@@ -39,7 +40,7 @@ const ComparePlayersContent = () => {
         <div className="modalContentContainer">
             <div className="compareModalInner">
                 <ComparePlayersList players={topTen} onPlayers={onPlayers} setOnPlayers={setOnPlayers} />
-                <TopTenCompareLineChart players={topTen} onPlayers={onPlayers} ptsExtent={ptsExtent} />
+                <TopTenCompareLineChart players={topTen} onPlayers={onPlayers} ptsExtent={ptsExtent} colors={colors} />
             </div>
         </div>
     )

@@ -2,7 +2,8 @@ import React from "react"
 import "./chartStyles.css"
 import Chart from './chartFrame/Chart'
 import { useChartDimensions } from "./chartFrame/utils"
-import { scaleLinear, line, curveMonotoneX } from "d3"
+// import { scaleLinear, line, curveMonotoneX } from "d3"
+import { scaleLinear, line } from "d3"
 import XAxis from './XAxis'
 import YAxis from './YAxis'
 import { motion } from 'framer-motion'
@@ -16,7 +17,7 @@ const variants = {
     closed: { opacity: 0, y: -150, transition: {duration: 1.25} }
 }
 
-const TopTenCompareLineChart = ({ players, onPlayers, ptsExtent }) => {
+const TopTenCompareLineChart = ({ players, onPlayers, ptsExtent, colors }) => {
     
     const [ref, dimensions] = useChartDimensions()
     const innerHeight = dimensions.height - dimensions.marginTop - dimensions.marginBottom
@@ -54,6 +55,7 @@ const TopTenCompareLineChart = ({ players, onPlayers, ptsExtent }) => {
                             opacity="0" 
                             key={index} 
                             className="playerLine" 
+                            stroke={colors[index]}
                             d={lineGenerator(player.matches)} 
                             variants={variants} 
                             animate={ onPlayers[index] ? "open" : "closed" } 
@@ -70,9 +72,7 @@ const TopTenCompareLineChart = ({ players, onPlayers, ptsExtent }) => {
                             xScale={xScale}
                             yScale={yScale}
                             onPlayer={onPlayers[index]}
-                            //opacity="0"
-                            //variants={variants} 
-                            //animate={ onPlayers[index] ? "open" : "closed" } 
+                            color={colors[index]}
                         />
                     )
                 })}
