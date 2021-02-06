@@ -6,16 +6,18 @@ import { scaleLinear, line, curveMonotoneX } from "d3"
 import XAxis from './XAxis'
 import YAxis from './YAxis'
 import { motion } from 'framer-motion'
+import Marks from './Marks'
 
 const ptsAccessor = d => d.pts
 const matchAccessor = d => d.match
 
 const variants = {
-    open: { opacity: 1, y: 0 },
-    closed: { opacity: 0, y: -100 }
+    open: { opacity: 1, y: 0, transition: {duration: 1.25} },
+    closed: { opacity: 0, y: -150, transition: {duration: 1.25} }
 }
 
 const TopTenCompareLineChart = ({ players, onPlayers, ptsExtent }) => {
+    
     const [ref, dimensions] = useChartDimensions()
     const innerHeight = dimensions.height - dimensions.marginTop - dimensions.marginBottom
     const innerWidth = dimensions.width - dimensions.marginLeft - dimensions.marginRight
@@ -48,9 +50,29 @@ const TopTenCompareLineChart = ({ players, onPlayers, ptsExtent }) => {
                 <YAxis yScale={yAxisScale} innerWidth={innerWidth} />
                 { players.map((player, index) => {
                     return (
-                        <motion.path opacity="0" key={index} className="playerLine" d={lineGenerator(player.matches)} variants={variants} animate={ onPlayers[index] ? "open" : "closed" } />
+                        <motion.path 
+                            opacity="0" 
+                            key={index} 
+                            className="playerLine" 
+                            d={lineGenerator(player.matches)} 
+                            variants={variants} 
+                            animate={ onPlayers[index] ? "open" : "closed" } 
+                        />
                     )
                 })}
+                { players.map((player, index) => {
+                    return (
+                        <Marks 
+                            key={index}
+                            data={player}
+                            matchAccessor={matchAccessor}
+                            ptsAccessor={ptsAccessor}
+                            xScale={xScale}
+                            yScale={yScale}
+                        />
+                    )
+                })}
+
                 <text fontSize="1.5em" fontWeight="bold" transform={`translate(5, -15)`}  textAnchor="left">Top Point Scorers</text>
                 <text fontSize="1.25em" transform={`translate(-35, ${innerHeight/2}) rotate(-90)`} textAnchor="middle">Points</text>
                 <text fontSize="1.25em" transform={`translate(${innerWidth/2}, ${innerHeight + 40})`} textAnchor="middle">Match</text>

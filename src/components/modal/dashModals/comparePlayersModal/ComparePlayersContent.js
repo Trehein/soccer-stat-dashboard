@@ -30,7 +30,7 @@ function calcPtsExtent (topTen) {
 }
 
 const ComparePlayersContent = () => {
-    const [onPlayers, setOnPlayers] = useState([true, false, false, false, false, false, false, false, false, false])
+    const [onPlayers, setOnPlayers] = useState([true, false, false, true, false, false, false, false, false, false])
     const topTen = sortPlayers(allPlayerStats)
     const ptsExtent = calcPtsExtent(topTen)
     // console.log(onPlayers)
