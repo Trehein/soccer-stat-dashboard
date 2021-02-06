@@ -1,13 +1,24 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
-const Marks = ({data, xScale, yScale, matchAccessor, ptsAccessor}) => 
+const variants = {
+    open: { opacity: 1, y: 0, transition: {delay: .5, duration: 1} },
+    closed: { opacity: 0, y: 0, transition: {duration: .5} }
+}
+
+const Marks = ({data, xScale, yScale, matchAccessor, ptsAccessor, onPlayer}) => 
     data.matches.map((d, index) =>  (
-            <circle
+            <motion.circle
                 className="mark"
                 key={index}
                 cx={xScale(matchAccessor(d))}
                 cy={yScale(ptsAccessor(d))}
-                r={8}
+                r={4}
+                stroke="white"
+                strokeWidth="1px"
+                opacity="0"
+                variants={variants} 
+                animate={ onPlayer ? "open" : "closed" } 
             />
         )
     )

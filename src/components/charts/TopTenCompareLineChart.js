@@ -39,7 +39,7 @@ const TopTenCompareLineChart = ({ players, onPlayers, ptsExtent }) => {
     const lineGenerator = line()
         .x(d => xScale(matchAccessor(d)))
         .y(d => yScale(ptsAccessor(d)))
-        .curve(curveMonotoneX)
+        // .curve(curveMonotoneX)
 
     console.log(onPlayers)
 
@@ -69,6 +69,10 @@ const TopTenCompareLineChart = ({ players, onPlayers, ptsExtent }) => {
                             ptsAccessor={ptsAccessor}
                             xScale={xScale}
                             yScale={yScale}
+                            onPlayer={onPlayers[index]}
+                            //opacity="0"
+                            //variants={variants} 
+                            //animate={ onPlayers[index] ? "open" : "closed" } 
                         />
                     )
                 })}
