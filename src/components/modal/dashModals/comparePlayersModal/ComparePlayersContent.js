@@ -39,7 +39,7 @@ const ComparePlayersContent = () => {
     return (
         <div className="modalContentContainer">
             <div className="compareModalInner">
-                <ComparePlayersList players={topTen} onPlayers={onPlayers} setOnPlayers={setOnPlayers} />
+                <ComparePlayersList players={topTen} onPlayers={onPlayers} setOnPlayers={setOnPlayers} colors={colors} />
                 <TopTenCompareLineChart players={topTen} onPlayers={onPlayers} ptsExtent={ptsExtent} colors={colors} />
             </div>
         </div>

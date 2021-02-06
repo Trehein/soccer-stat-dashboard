@@ -1,7 +1,8 @@
 import React from 'react'
 import ClubLogoPicker from '../../../../utils/ClubLogoPicker'
 
-const ComparePlayersLI = ({ player, onPlayers, setOnPlayers, index }) => {
+const ComparePlayersLI = ({ player, onPlayers, setOnPlayers, index, color }) => {
+    console.log(color)
 
     function handlePlayerSet () {
         let items = [...onPlayers]
@@ -30,6 +31,7 @@ return (
                     <h5>
                         {player.totalPTS}
                     </h5>
+                        <div className="colorBox" style={{background: `${color}`}} />
                 </div>
             </div>
         </li>

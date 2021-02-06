@@ -40,9 +40,9 @@ const TopTenCompareLineChart = ({ players, onPlayers, ptsExtent, colors }) => {
     const lineGenerator = line()
         .x(d => xScale(matchAccessor(d)))
         .y(d => yScale(ptsAccessor(d)))
-        // .curve(curveMonotoneX)
+        // .curve(curveMonotoneX) // use the d3 curves to give the line a different curve
 
-    console.log(onPlayers)
+    // console.log(onPlayers)
 
     return (
         <div className="TopTenCompareLine" ref={ref}>
