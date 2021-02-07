@@ -56,9 +56,11 @@ const TopTenCompareLineChart = ({ players, onPlayers, ptsExtent, colors }) => {
                             key={index} 
                             className="playerLine" 
                             stroke={colors[index]}
+                            strokeWidth="2px"
                             d={lineGenerator(player.matches)} 
                             variants={variants} 
                             animate={ onPlayers[index] ? "open" : "closed" } 
+                            whileHover={{ strokeWidth: "3px" }}    
                         />
                     )
                 })}

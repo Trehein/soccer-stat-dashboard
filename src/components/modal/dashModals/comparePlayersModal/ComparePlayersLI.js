@@ -8,7 +8,7 @@ const variants = {
 }
 
 const ComparePlayersLI = ({ player, onPlayers, setOnPlayers, index, color }) => {
-    console.log(color)
+    // console.log(color)
 
     function handlePlayerSet () {
         let items = [...onPlayers]
