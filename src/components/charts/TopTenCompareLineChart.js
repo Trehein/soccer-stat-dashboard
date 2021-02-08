@@ -11,6 +11,9 @@ import Marks from './Marks'
 
 const ptsAccessor = d => d.pts
 const matchAccessor = d => d.match
+const oppAccessor = d => d.opp
+const aAccessor = d => d.a
+const gsAccessor = d => d.gs
 
 const variants = {
     open: { opacity: 1, y: 0, transition: {duration: 1.25} },
@@ -71,6 +74,9 @@ const TopTenCompareLineChart = ({ players, onPlayers, ptsExtent, colors }) => {
                             data={player}
                             matchAccessor={matchAccessor}
                             ptsAccessor={ptsAccessor}
+                            oppAccessor={oppAccessor}
+                            aAccessor={aAccessor}
+                            gsAccessor={gsAccessor}
                             xScale={xScale}
                             yScale={yScale}
                             onPlayer={onPlayers[index]}
