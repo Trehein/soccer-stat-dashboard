@@ -11,10 +11,6 @@
     /* stroke-width: 2px; */
 }
 
-.domain {
-    /* display: none; */
-}
-
 .tick line {
     opacity: .8;
     stroke: #bbbbbb;
