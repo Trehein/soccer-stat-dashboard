@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Player 1",
+        "club": "LIV",
+        "position": "FWD",
+        "atk": {
+            "g" : 12
+        }
+    },
+    {
+        "name": "Player 2",
+        "club": "CHE",
+        "position": "FWD",
+        "atk": {
+            "g" : 3
+        }
+    },
+    {
+        "name": "Player 3",
+        "club": "LIV",
+        "position": "FWD",
+        "atk": {
+            "g" : 6
+        }
+    },
+    {
+        "name": "Player 4",
+        "club": "LIV",
+        "position": "MID",
+        "atk": {
+            "g" : 10
+        }
+    },
+    {
+        "name": "Player 5",
+        "club": "LIV",
+        "position": "MID",
+        "atk": {
+            "g" : 3
+        }
+    },
+    {
+        "name": "Player 6",
+        "club": "TOT",
+        "position": "MID",
+        "atk": {
+            "g" : 6
+        }
+    },
+    {
+        "name": "Player 7",
+        "club": "LIV",
+        "position": "MID",
+        "atk": {
+            "g" : 1
+        }
+    },
+    {
+        "name": "Player 8",
+        "club": "LIV",
+        "position": "MID",
+        "atk": {
+            "g" : 3
+        }
+    },
+    {
+        "name": "Player 9",
+        "club": "LIV",
+        "position": "MID",
+        "atk": {
+            "g" : 5
+        }
+    },
+    {
+        "name": "Player 10",
+        "club": "LIV",
+        "position": "DEF",
+        "atk": {
+            "g" : 2
+        }
+    },
+    {
+        "name": "Player 11",
+        "club": "LIV",
+        "position": "DEF",
+        "atk": {
+            "g" : 1
+        }
+    },
+    {
+        "name": "Player 12",
+        "club": "LIV",
+        "position": "DEF",
+        "atk": {
+            "g" : 4
+        }
+    },
+    {
+        "name": "Player 13",
+        "club": "LIV",
+        "position": "GKP",
+        "atk": {
+            "g" : 0
+        }
+    },
+    {
+        "name": "Player 14",
+        "club": "TOT",
+        "position": "FWD",
+        "atk": {
+            "g" : 12
+        }
+    },
+    {
+        "name": "Player 15",
+        "club": "CHE",
+        "position": "MID",
+        "atk": {
+            "g" : 18
+        }
+    }
+]

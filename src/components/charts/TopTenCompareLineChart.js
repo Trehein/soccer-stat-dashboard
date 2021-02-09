@@ -2,7 +2,7 @@ import React from "react"
 import "./chartStyles.css"
 import Chart from './chartFrame/Chart'
 import { useChartDimensions } from "./chartFrame/utils"
-// import { scaleLinear, line, curveMonotoneX } from "d3"
+// import { scaleLinear, line, curveMonotoneX } from "d3" //curveMonotoneX affects line curvature
 import { scaleLinear, line } from "d3"
 import XAxis from './XAxis'
 import YAxis from './YAxis'

@@ -53,5 +53,4 @@ const Marks = ({data, xScale, yScale, matchAccessor, ptsAccessor, oppAccessor, a
     )
 }
 
-
 export default Marks
