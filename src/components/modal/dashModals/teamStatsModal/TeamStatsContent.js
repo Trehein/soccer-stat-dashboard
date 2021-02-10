@@ -11,8 +11,13 @@ function calcPosTotals (fwds, mids, defs, gkps) {
     let midTotal = 0
     let defTotal = 0
     let gkpTotal = 0
-    let totals = { fwd: 0, mid: 0, def: 0, gkp: 0 }
-
+    let totals = [
+        { pos: "fwd", pts: 0 },
+        { pos: "mid", pts: 0 },
+        { pos: "def", pts: 0 },
+        { pos: "gkp", pts: 0 }
+    ]
+    
     fwds.map(player => {
         return fwdTotal = fwdTotal + player.atk.g
     })
@@ -29,10 +34,10 @@ function calcPosTotals (fwds, mids, defs, gkps) {
         return gkpTotal = gkpTotal + player.atk.g
     })
 
-    totals.fwd = fwdTotal
-    totals.mid = midTotal
-    totals.def = defTotal
-    totals.gkp = gkpTotal
+    totals[0].pts = fwdTotal
+    totals[1].pts = midTotal
+    totals[2].pts = defTotal
+    totals[3].pts = gkpTotal
 
     return totals
 }
@@ -47,12 +52,12 @@ const TeamStatsContent = () => {
     // const onStat = "g"
     const posTotals = calcPosTotals(fwds, mids, defs, gkps)
 
-    console.log(posTotals)
+    // console.log(posTotals)
 
     return (
         <div className="modalContentContainer">
             <div className="teamStatsModalInner">
-                <ModalTeamPieChart />
+                <ModalTeamPieChart allPlayers={filteredPlayers} posTotals={posTotals} />
             </div>
         </div>
     )
