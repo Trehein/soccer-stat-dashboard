@@ -57,7 +57,12 @@ const TeamStatsContent = () => {
     return (
         <div className="modalContentContainer">
             <div className="teamStatsModalInner">
-                <ModalTeamPieChart allPlayers={filteredPlayers} posTotals={posTotals} />
+                <div className="donutContainer">
+                    <div className="pieChartHeader">
+                        <h2>Liverpool</h2>
+                    </div>
+                    <ModalTeamPieChart allPlayers={filteredPlayers} posTotals={posTotals} />
+                </div>
             </div>
         </div>
     )
