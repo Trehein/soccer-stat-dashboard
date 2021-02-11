@@ -13,27 +13,31 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
     // console.log(allPlayers)
     // console.log(posTotals)
 
-    let pie = d3.pie()
-        .value(function(d) { return d.pts })
-        (posTotals)
+    let pieGen = d3.pie()
+        .value(d => d.pts)
+        .sort((a, b) => a.pos.localeCompare(b.pos))
 
-    pie.forEach(d => d.outerRadius = outerRadius - 20)
+    let posPie = pieGen(posTotals)
+
+    // console.log(pie)
+
+    posPie.forEach(d => d.outerRadius = outerRadius - 20)
 
 
     const Slice = props => {
-        let { pie } = props
+        let { posPie } = props
 
-        // console.log(props.pie)
+        // console.log(pie)
 
         let arc = d3.arc()
-            .innerRadius(innerRadius)
-            .outerRadius(outerRadius)
+            .innerRadius(innerRadius + 30)
+            .outerRadius(outerRadius + 10)
 
-        return pie.map((slice, index) => {
+        return posPie.map((slice, index) => {
             return <path
                 className="pieSlice"
                 d={arc(slice)} 
-                fill="orange"
+                fill={slice.data.color}
                 key={index} 
                 id={slice.data.pos}
                 //onClick={(e) => handleClick(e, slice)}
@@ -46,7 +50,7 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
     return (
         <div className="Donut" ref={ref}>
             <PieChartFrame dimensions={dimensions}>
-                <Slice pie={pie} />
+                <Slice posPie={posPie} />
             </PieChartFrame>
         </div>
     )

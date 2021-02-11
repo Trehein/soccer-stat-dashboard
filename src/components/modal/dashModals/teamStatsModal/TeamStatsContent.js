@@ -12,10 +12,10 @@ function calcPosTotals (fwds, mids, defs, gkps) {
     let defTotal = 0
     let gkpTotal = 0
     let totals = [
-        { pos: "fwd", pts: 0 },
-        { pos: "mid", pts: 0 },
-        { pos: "def", pts: 0 },
-        { pos: "gkp", pts: 0 }
+        { pos: "fwd", pts: 0, color: "red" },
+        { pos: "mid", pts: 0, color: "green" },
+        { pos: "def", pts: 0, color: "blue" },
+        { pos: "gkp", pts: 0, color: "yellow" }
     ]
     
     fwds.map(player => {
