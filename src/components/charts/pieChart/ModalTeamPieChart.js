@@ -8,7 +8,7 @@ import "./pieStyles.css"
 const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
     const [ref, dimensions] = useChartDimensions({})
     const outerRadius = dimensions.width / 2 - 20;
-    const innerRadius = 30;
+    const innerRadius = 60;
 
     console.log(allPlayers)
 
@@ -16,24 +16,24 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
         .value(d => d.atk.g)
         .sort((a, b) => a.position.localeCompare(b.position))
     let playerPieData = outerPieGen(allPlayers)
-    playerPieData.forEach(d => d.outerRadius = outerRadius - 30)
+    playerPieData.forEach(d => d.outerRadius = outerRadius)
 
     let innerPieGen = d3.pie()
         .value(d => d.pts)
         .sort((a, b) => a.pos.localeCompare(b.pos))
     let posPieData = innerPieGen(posTotals)
-    posPieData.forEach(d => d.outerRadius = outerRadius - 20)
+    posPieData.forEach(d => d.outerRadius = outerRadius)
 
     function playerColorPicker (pos) {
         switch (pos) {
             case "DEF":
-                return "blue"
+                return "rgba(41,121,255 ,1)"
             case "FWD":
-                return "red"
+                return "rgba(255,23,68 ,1)"
             case "MID":
-                return "green"
+                return "rgba(0,230,118 ,1)"
             case "GKP":
-                return "yellow"
+                return "rgba(255,234,0 ,1)"
             default:
                 return "black"
         }
@@ -43,8 +43,8 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
         let { posPieData } = props
 
         let arc = d3.arc()
-            .innerRadius(innerRadius + 50)
-            .outerRadius(outerRadius - 30)
+            .innerRadius(innerRadius)
+            .outerRadius(outerRadius - 50)
 
         return posPieData.map((slice, index) => {
             return <path
@@ -66,8 +66,8 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
         let { playerPieData } = props
 
         let arc = d3.arc()
-            .innerRadius(innerRadius + 70)
-            .outerRadius(outerRadius + 10)
+            .innerRadius(innerRadius + 65)
+            .outerRadius(outerRadius)
 
         return playerPieData.map((slice, index) => {
             return <path
