@@ -10,36 +10,74 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
     const outerRadius = dimensions.width / 2 - 20;
     const innerRadius = 30;
 
-    // console.log(allPlayers)
-    // console.log(posTotals)
+    console.log(allPlayers)
 
-    let pieGen = d3.pie()
+    let outerPieGen = d3.pie()
+        .value(d => d.atk.g)
+        .sort((a, b) => a.position.localeCompare(b.position))
+    let playerPieData = outerPieGen(allPlayers)
+    playerPieData.forEach(d => d.outerRadius = outerRadius - 30)
+
+    let innerPieGen = d3.pie()
         .value(d => d.pts)
         .sort((a, b) => a.pos.localeCompare(b.pos))
+    let posPieData = innerPieGen(posTotals)
+    posPieData.forEach(d => d.outerRadius = outerRadius - 20)
 
-    let posPie = pieGen(posTotals)
+    function playerColorPicker (pos) {
+        switch (pos) {
+            case "DEF":
+                return "blue"
+            case "FWD":
+                return "red"
+            case "MID":
+                return "green"
+            case "GKP":
+                return "yellow"
+            default:
+                return "black"
+        }
+    }
 
-    // console.log(pie)
-
-    posPie.forEach(d => d.outerRadius = outerRadius - 20)
-
-
-    const Slice = props => {
-        let { posPie } = props
-
-        // console.log(pie)
+    const InnerSlice = props => {
+        let { posPieData } = props
 
         let arc = d3.arc()
-            .innerRadius(innerRadius + 30)
-            .outerRadius(outerRadius + 10)
+            .innerRadius(innerRadius + 50)
+            .outerRadius(outerRadius - 30)
 
-        return posPie.map((slice, index) => {
+        return posPieData.map((slice, index) => {
             return <path
                 className="pieSlice"
                 d={arc(slice)} 
                 fill={slice.data.color}
                 key={index} 
                 id={slice.data.pos}
+                stroke="black"
+                strokeWidth=".5px"
+                //onClick={(e) => handleClick(e, slice)}
+                //onMouseOver={(e) => handleMouseOver(e, slice)}
+                //onMouseOut={(e) => handleMouseOut(e, slice)}
+            />
+        })
+    }
+
+    const OuterSlice = props => {
+        let { playerPieData } = props
+
+        let arc = d3.arc()
+            .innerRadius(innerRadius + 70)
+            .outerRadius(outerRadius + 10)
+
+        return playerPieData.map((slice, index) => {
+            return <path
+                className="pieSlice"
+                d={arc(slice)} 
+                fill={playerColorPicker(slice.data.position)}
+                key={index} 
+                id={slice.data.position}
+                stroke="black"
+                strokeWidth=".5px"
                 //onClick={(e) => handleClick(e, slice)}
                 //onMouseOver={(e) => handleMouseOver(e, slice)}
                 //onMouseOut={(e) => handleMouseOut(e, slice)}
@@ -50,7 +88,8 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
     return (
         <div className="Donut" ref={ref}>
             <PieChartFrame dimensions={dimensions}>
-                <Slice posPie={posPie} />
+                <InnerSlice posPieData={posPieData} />
+                <OuterSlice playerPieData={playerPieData} />
             </PieChartFrame>
         </div>
     )
