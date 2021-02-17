@@ -39,6 +39,43 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
         }
     }
 
+    const handleMouseOver = (e, slice) => {
+        d3.select(e.target)
+            .transition()
+            .duration(500)
+            .attr('stroke', 'black')
+            .attr('stroke-width', 2)
+            // .style('fill', d => {
+            //     if (e.target.getAttribute('id') === slice.data.key) {
+            //         return slice.data.bright
+            //     } else {
+            //         return slice.data.bright
+            //     }
+            // })
+            .style('cursor', 'pointer')
+    }
+
+    const handleMouseOut = (e, slice) => {
+        d3.select(e.target)
+            .transition()
+            .duration(750)
+            // .style('fill', d => slice.data.color)
+            .attr('stroke-width', '.5px')
+    }
+
+    // const handleClick = (e, slice) => {
+    //     // console.log(slice.data)
+    //     setGenre('The ' + slice.data.genre)
+    //     setDesc(slice.data.desc)
+    //     setGenreTitle('For the ' + slice.data.genre + 's')
+    //     setPeeves('Pet Peeves: ' + slice.data.peeves)
+    //     setRec('Recommended Book Genres: ' + slice.data.rec)
+    //     // d3.select(e.target)
+    //     //     .transition()
+    //     //     .duration(1000)
+    //     //     .style('fill', d => 'black')
+    // } 
+
     const InnerSlice = props => {
         let { posPieData } = props
 

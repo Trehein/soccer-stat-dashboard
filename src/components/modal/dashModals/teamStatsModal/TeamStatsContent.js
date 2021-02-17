@@ -3,7 +3,7 @@ import "./TeamStatsModal.css"
 // import ModalTeamBarChart from '../../../charts/barChart/ModalTeamBarChart'
 import ModalTeamPieChart from '../../../charts/pieChart/ModalTeamPieChart'
 import teamStatsModalPie from '../../../../datasets/teamStatsModalPie.json'
-
+import DetailedStatsContainer from './DetailedStatsContainer'
 
 
 function calcPosTotals (fwds, mids, defs, gkps) {
@@ -62,6 +62,7 @@ const TeamStatsContent = () => {
                         <h2>Liverpool</h2>
                     </div>
                     <ModalTeamPieChart allPlayers={filteredPlayers} posTotals={posTotals} />
+                    <DetailedStatsContainer />
                 </div>
             </div>
         </div>
