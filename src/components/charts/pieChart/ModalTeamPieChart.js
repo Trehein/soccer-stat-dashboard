@@ -10,7 +10,7 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
     const outerRadius = dimensions.width / 2 - 20;
     const innerRadius = 60;
 
-    console.log(allPlayers)
+    // console.log(allPlayers)
 
     let outerPieGen = d3.pie()
         .value(d => d.atk.g)
@@ -23,6 +23,17 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
         .sort((a, b) => a.pos.localeCompare(b.pos))
     let posPieData = innerPieGen(posTotals)
     posPieData.forEach(d => d.outerRadius = outerRadius)
+
+    function calcTotal (posPieData) {
+        let total = 0;
+
+        posPieData.map(pos => {
+            return total = total + pos.data.pts;
+        })
+
+        console.log(total)
+        return total;
+    }
 
     function playerColorPicker (pos) {
         switch (pos) {
@@ -99,6 +110,33 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
         })
     }
 
+    const InnerLabel = props => {
+        let { posPieData } = props
+
+        let arc = d3.arc()
+            .innerRadius(innerRadius)
+            .outerRadius(outerRadius - 50)
+        
+        return posPieData.map((label, index) => {
+            if(label.data.pts > 0) {
+                return <text
+                    transform={`translate(${arc.centroid(label)})`}
+                    textAnchor="middle"
+                    alignmentBaseline="middle"
+                    fill="white"
+                    fontSize="13"
+                    fontFamily="Century Gothic"
+                    key={index}
+                    cursor='pointer'
+                >
+                    {(label.data.pts)}
+                </text>
+            } else {
+                return null;
+            }
+        })
+    }
+
     const OuterSlice = props => {
         let { playerPieData } = props
 
@@ -122,11 +160,52 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
         })
     }
 
+    const OuterLabel = props => {
+        let { playerPieData } = props;
+        
+        let arc = d3.arc()
+            .innerRadius(innerRadius + 65)
+            .outerRadius(outerRadius)
+        
+        return playerPieData.map((label, index) => {
+            if(label.data.atk.g > 0) {
+                return <text
+                    transform={`translate(${arc.centroid(label)})`}
+                    textAnchor="middle"
+                    alignmentBaseline="middle"
+                    fill="white"
+                    fontSize="10"
+                    fontFamily="Century Gothic"
+                    key={index}
+                    cursor='pointer'
+                >
+                    {(label.data.atk.g)}
+                </text>
+            } else {
+                return null;
+            }
+        })
+    }
+
+    const CenterLabel = () => {
+        return <text
+            //transform={`translate(${dimensions.width / 2}, ${dimensions.height / 2})`}
+            textAnchor="middle"
+            alignmentBaseline="middle"
+        >
+            Goals
+            {calcTotal(posPieData)}
+        </text>
+    }
+
     return (
         <div className="Donut" ref={ref}>
             <PieChartFrame dimensions={dimensions}>
                 <InnerSlice posPieData={posPieData} />
+                <InnerLabel posPieData={posPieData} />
                 <OuterSlice playerPieData={playerPieData} />
+                <OuterLabel playerPieData={playerPieData} />
+                <CenterLabel />
             </PieChartFrame>
         </div>
     )
