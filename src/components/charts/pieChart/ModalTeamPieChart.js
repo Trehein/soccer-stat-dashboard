@@ -4,7 +4,6 @@ import PieChartFrame from '../chartFrame/PieChartFrame'
 import { useChartDimensions } from '../chartFrame/utils'
 import "./pieStyles.css"
 
-
 const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
     const [ref, dimensions] = useChartDimensions({})
     const outerRadius = dimensions.width / 2 - 20;
@@ -95,7 +94,8 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
             .outerRadius(outerRadius - 50)
 
         return posPieData.map((slice, index) => {
-            return <path
+            return (
+            <path
                 className="pieSlice"
                 d={arc(slice)} 
                 fill={slice.data.color}
@@ -103,11 +103,12 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
                 id={slice.data.pos}
                 stroke="black"
                 strokeWidth=".5px"
+                cursor='pointer'
                 //onClick={(e) => handleClick(e, slice)}
                 //onMouseOver={(e) => handleMouseOver(e, slice)}
                 //onMouseOut={(e) => handleMouseOut(e, slice)}
             />
-        })
+        )})
     }
 
     const InnerLabel = props => {
@@ -124,7 +125,7 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
                     textAnchor="middle"
                     alignmentBaseline="middle"
                     fill="white"
-                    fontSize="13"
+                    fontSize="17"
                     fontFamily="Century Gothic"
                     key={index}
                     cursor='pointer'
@@ -153,6 +154,7 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
                 id={slice.data.position}
                 stroke="black"
                 strokeWidth=".5px"
+                cursor='pointer'
                 //onClick={(e) => handleClick(e, slice)}
                 //onMouseOver={(e) => handleMouseOver(e, slice)}
                 //onMouseOut={(e) => handleMouseOut(e, slice)}
@@ -174,7 +176,7 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
                     textAnchor="middle"
                     alignmentBaseline="middle"
                     fill="white"
-                    fontSize="10"
+                    fontSize="13"
                     fontFamily="Century Gothic"
                     key={index}
                     cursor='pointer'
@@ -189,11 +191,26 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
 
     const CenterLabel = () => {
         return <text
-            //transform={`translate(${dimensions.width / 2}, ${dimensions.height / 2})`}
+            transform={`translate(0, -10)`}
             textAnchor="middle"
             alignmentBaseline="middle"
+            fontSize="20"
+            fontFamily="Century Gothic"
+            fontWeight="bold"
         >
             Goals
+        </text>
+    }
+
+    const CenterStatLabel = () => {
+        return <text
+            transform={`translate(0, 15)`}
+            textAnchor="middle"
+            alignmentBaseline="middle"
+            fontSize="25"
+            fontFamily="Century Gothic"
+            fontWeight="bold"
+        >
             {calcTotal(posPieData)}
         </text>
     }
@@ -206,6 +223,7 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
                 <OuterSlice playerPieData={playerPieData} />
                 <OuterLabel playerPieData={playerPieData} />
                 <CenterLabel />
+                <CenterStatLabel />
             </PieChartFrame>
         </div>
     )
