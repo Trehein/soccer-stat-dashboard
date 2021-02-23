@@ -9,8 +9,6 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
     const outerRadius = dimensions.width / 2 - 20;
     const innerRadius = 60;
 
-    // console.log(allPlayers)
-
     let outerPieGen = d3.pie()
         .value(d => d.atk.g)
         .sort((a, b) => a.position.localeCompare(b.position))
@@ -25,12 +23,9 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
 
     function calcTotal (posPieData) {
         let total = 0;
-
         posPieData.map(pos => {
             return total = total + pos.data.pts;
         })
-
-        console.log(total)
         return total;
     }
 
@@ -49,29 +44,29 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
         }
     }
 
-    const handleMouseOver = (e, slice) => {
-        d3.select(e.target)
-            .transition()
-            .duration(500)
-            .attr('stroke', 'black')
-            .attr('stroke-width', 2)
-            // .style('fill', d => {
-            //     if (e.target.getAttribute('id') === slice.data.key) {
-            //         return slice.data.bright
-            //     } else {
-            //         return slice.data.bright
-            //     }
-            // })
-            .style('cursor', 'pointer')
-    }
+    // const handleMouseOver = (e, slice) => {
+    //     d3.select(e.target)
+    //         .transition()
+    //         .duration(500)
+    //         .attr('stroke', 'black')
+    //         .attr('stroke-width', 2)
+    //         // .style('fill', d => {
+    //         //     if (e.target.getAttribute('id') === slice.data.key) {
+    //         //         return slice.data.bright
+    //         //     } else {
+    //         //         return slice.data.bright
+    //         //     }
+    //         // })
+    //         .style('cursor', 'pointer')
+    // }
 
-    const handleMouseOut = (e, slice) => {
-        d3.select(e.target)
-            .transition()
-            .duration(750)
-            // .style('fill', d => slice.data.color)
-            .attr('stroke-width', '.5px')
-    }
+    // const handleMouseOut = (e, slice) => {
+    //     d3.select(e.target)
+    //         .transition()
+    //         .duration(750)
+    //         // .style('fill', d => slice.data.color)
+    //         .attr('stroke-width', '.5px')
+    // }
 
     // const handleClick = (e, slice) => {
     //     // console.log(slice.data)
@@ -107,7 +102,9 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
                 //onClick={(e) => handleClick(e, slice)}
                 //onMouseOver={(e) => handleMouseOver(e, slice)}
                 //onMouseOut={(e) => handleMouseOut(e, slice)}
-            />
+            >
+                <title>{slice.data.pos}</title>
+            </path>
         )})
     }
 
@@ -131,6 +128,7 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
                     cursor='pointer'
                 >
                     {(label.data.pts)}
+                    <title>{label.data.pos}</title>
                 </text>
             } else {
                 return null;
@@ -158,7 +156,9 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
                 //onClick={(e) => handleClick(e, slice)}
                 //onMouseOver={(e) => handleMouseOver(e, slice)}
                 //onMouseOut={(e) => handleMouseOut(e, slice)}
-            />
+            >
+                <title>{slice.data.name}</title>
+            </path>
         })
     }
 
@@ -182,6 +182,7 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
                     cursor='pointer'
                 >
                     {(label.data.atk.g)}
+                    <title>{label.data.name}</title>
                 </text>
             } else {
                 return null;
