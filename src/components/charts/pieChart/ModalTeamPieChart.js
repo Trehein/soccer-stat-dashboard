@@ -4,7 +4,7 @@ import PieChartFrame from '../chartFrame/PieChartFrame'
 import { useChartDimensions } from '../chartFrame/utils'
 import "./pieStyles.css"
 
-const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
+const ModalTeamPieChart = ({ allPlayers, posTotals, setOnSlice }) => {
     const [ref, dimensions] = useChartDimensions({})
     const outerRadius = dimensions.width / 2 - 20;
     const innerRadius = 60;
@@ -45,11 +45,14 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
     }
 
     // const handleMouseOver = (e, slice) => {
+    //     console.log(e.target)
     //     d3.select(e.target)
     //         .transition()
     //         .duration(500)
-    //         .attr('stroke', 'black')
-    //         .attr('stroke-width', 2)
+    //         .attr('stroke', 'white')
+    //         .attr('outerRadius', slice.outerRadius + 30)
+    //         .attr('zIndex', 99)
+    //         // .attr('stroke-width', 2)
     //         // .style('fill', d => {
     //         //     if (e.target.getAttribute('id') === slice.data.key) {
     //         //         return slice.data.bright
@@ -59,6 +62,14 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
     //         // })
     //         .style('cursor', 'pointer')
     // }
+
+    const sliceSetter = (e, slice) =>{
+        if(slice.data.pos) {
+            setOnSlice(slice.data.pos)
+        } else {
+            setOnSlice(slice.data.name)
+        }
+    }
 
     // const handleMouseOut = (e, slice) => {
     //     d3.select(e.target)
@@ -99,9 +110,12 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
                 stroke="black"
                 strokeWidth=".5px"
                 cursor='pointer'
+                onClick= {(e) => sliceSetter(e, slice)}
                 //onClick={(e) => handleClick(e, slice)}
                 //onMouseOver={(e) => handleMouseOver(e, slice)}
                 //onMouseOut={(e) => handleMouseOut(e, slice)}
+                //whileHover={{ scale: 1.05 }}
+
             >
                 <title>{slice.data.pos}</title>
             </path>
@@ -126,6 +140,7 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
                     fontFamily="Century Gothic"
                     key={index}
                     cursor='pointer'
+                    onClick= {(e) => sliceSetter(e, label)}
                 >
                     {(label.data.pts)}
                     <title>{label.data.pos}</title>
@@ -153,6 +168,7 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
                 stroke="black"
                 strokeWidth=".5px"
                 cursor='pointer'
+                onClick= {(e) => sliceSetter(e, slice)}
                 //onClick={(e) => handleClick(e, slice)}
                 //onMouseOver={(e) => handleMouseOver(e, slice)}
                 //onMouseOut={(e) => handleMouseOut(e, slice)}
@@ -180,6 +196,7 @@ const ModalTeamPieChart = ({ allPlayers, posTotals }) => {
                     fontFamily="Century Gothic"
                     key={index}
                     cursor='pointer'
+                    onClick= {(e) => sliceSetter(e, label)}
                 >
                     {(label.data.atk.g)}
                     <title>{label.data.name}</title>

@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./TeamStatsModal.css"
 // import ModalTeamBarChart from '../../../charts/barChart/ModalTeamBarChart'
 import ModalTeamPieChart from '../../../charts/pieChart/ModalTeamPieChart'
 import teamStatsModalPie from '../../../../datasets/teamStatsModalPie.json'
 import DetailedStatsContainer from './DetailedStatsContainer'
-
 
 function calcPosTotals (fwds, mids, defs, gkps) {
     let fwdTotal = 0
@@ -51,8 +50,9 @@ const TeamStatsContent = () => {
     const gkps = filteredPlayers.filter(player => player.position === "GKP")
     // const onStat = "g"
     const posTotals = calcPosTotals(fwds, mids, defs, gkps)
+    const [onSlice, setOnSlice] = useState(null)
 
-    // console.log(posTotals)
+    console.log(onSlice)
 
     return (
         <div className="modalContentContainer">
@@ -61,8 +61,8 @@ const TeamStatsContent = () => {
                     <div className="pieChartHeader">
                         <h2>Liverpool</h2>
                     </div>
-                    <ModalTeamPieChart allPlayers={filteredPlayers} posTotals={posTotals} />
-                    <DetailedStatsContainer />
+                    <ModalTeamPieChart allPlayers={filteredPlayers} posTotals={posTotals} setOnSlice={setOnSlice} />
+                    <DetailedStatsContainer onSlice={onSlice} />
                 </div>
             </div>
         </div>
