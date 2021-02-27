@@ -17,9 +17,7 @@
 
 .Donut { 
     height: 48vh;
-    margin-left: 2em;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px auto;
     width: 85%;
     /* padding-top: 2em; */
   }

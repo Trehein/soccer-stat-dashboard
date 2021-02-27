@@ -52,7 +52,7 @@ const TeamStatsContent = () => {
     const posTotals = calcPosTotals(fwds, mids, defs, gkps)
     const [onSlice, setOnSlice] = useState(null)
 
-    console.log(onSlice)
+    // console.log(onSlice)
 
     return (
         <div className="modalContentContainer">
@@ -62,8 +62,8 @@ const TeamStatsContent = () => {
                         <h2>Liverpool</h2>
                     </div>
                     <ModalTeamPieChart allPlayers={filteredPlayers} posTotals={posTotals} setOnSlice={setOnSlice} />
-                    <DetailedStatsContainer onSlice={onSlice} />
                 </div>
+                <DetailedStatsContainer onSlice={onSlice} allPlayers={filteredPlayers} />
             </div>
         </div>
     )

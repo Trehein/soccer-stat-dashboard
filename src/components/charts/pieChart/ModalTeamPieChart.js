@@ -5,6 +5,7 @@ import { useChartDimensions } from '../chartFrame/utils'
 import "./pieStyles.css"
 
 const ModalTeamPieChart = ({ allPlayers, posTotals, setOnSlice }) => {
+    // console.log(allPlayers)
     const [ref, dimensions] = useChartDimensions({})
     const outerRadius = dimensions.width / 2 - 20;
     const innerRadius = 60;
