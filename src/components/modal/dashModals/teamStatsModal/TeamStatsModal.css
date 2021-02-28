@@ -59,3 +59,35 @@
 .headerStatBox {
     width: 50%;
 }
+
+.playerListRow {
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid rgba(50,50,50,0.5);
+    cursor: pointer;
+}
+
+.halfBox {
+    width: 50%;
+}
+
+.halfStatBox {
+    width: 50%;
+    /* border-left: 1px solid rgba(50,50,50,0.5); */
+}
+
+.halfStatBox > h5 {
+    text-align: center;
+    margin: 0px auto;
+    border-left: 1px solid rgba(50,50,50,0.5);
+}
+
+.liName {
+    width: 80%;
+    margin: 0px auto;
+    text-align: left;
+}
+

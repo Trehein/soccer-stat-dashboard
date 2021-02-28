@@ -1,4 +1,5 @@
 import React from 'react'
+import PlayerListItem from './PlayerListItem'
 
 const PlayerList = ({ players, onSlice }) => {
 
@@ -24,6 +25,13 @@ const PlayerList = ({ players, onSlice }) => {
                         </h3>
                     </div>
                 </div>
+            </div>
+            <div>
+                { players.map(player => {
+                    return (
+                        <PlayerListItem key={player.name} player={player} />
+                    )
+                })}
             </div>
         </div>
     )
