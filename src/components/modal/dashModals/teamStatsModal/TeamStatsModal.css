@@ -16,3 +16,46 @@
 .statsContainer {
     width: 55%;
 }
+
+.playerListContainer {
+    width: 85%;
+    height: 100%;
+    /* padding: 10px; */
+    /* text-align: center; */
+    align-items: center;
+    background-color: white;
+    /* border-radius: 10px;
+    border: 1px solid #bdbdbd;
+    box-shadow: 0px 0px 4px rgb(110,110,110); */
+    margin: 0px auto;
+}
+
+.playerListHeader {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 6px 0px;
+    border-bottom: solid rgb(59, 59, 59) 1px;
+}
+
+.headerStatContainer {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.headerPlayerName {
+    width: 100%;
+}
+
+.headerBox {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.headerStatBox {
+    width: 50%;
+}
