@@ -1,31 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PlayerList from './PlayerList'
 
 const DetailedStatsContainer = (props) => {
     const players = props.allPlayers
     const sortedPlayers = sortPlayers(players)
-
-    const [onSwitch, setOnSwitch] = useState({
-        "def": false,
-        "mid": false,
-        "fwd": false,
-        "onPlayer": null
-    })
-
-    setOnSwitch()
-
-    function setSelection (onProp) {
-        if (onProp.pos) {
-            return onProp
-        } else {
-            setOnSwitch({
-                ...props,
-                onPlayer: onProp.name
-            })
-        }
-    }
-
-    console.log(onSwitch)
+    const onSlice = props.onSlice
 
     function sortPlayers (players) {
         return (
@@ -35,7 +14,7 @@ const DetailedStatsContainer = (props) => {
 
     return (
         <div className="statsContainer">
-            <PlayerList players={sortedPlayers} />
+            <PlayerList players={sortedPlayers} onSlice={onSlice} />
         </div>
     )
 }
