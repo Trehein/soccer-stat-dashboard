@@ -1,3 +1,16 @@
+# Soccer Stat Dashboard
+## Visualizing Fantasy Stats
+![Landing](https://user-images.githubusercontent.com/18636420/119132239-14ffb200-ba00-11eb-86fc-c8522b0193fa.PNG)
+
+### In-depth Player Stats
+![playerStats](https://user-images.githubusercontent.com/18636420/119132385-3c567f00-ba00-11eb-96b2-bcd20abb254c.PNG)
+
+### Player Comparisons
+![Compare Players](https://user-images.githubusercontent.com/18636420/119132475-5b551100-ba00-11eb-9452-ab7f372025da.PNG)
+
+### Team Point Breakdowns
+![teamStatsPie](https://user-images.githubusercontent.com/18636420/119132534-70ca3b00-ba00-11eb-963a-eea582ed2f5d.PNG)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
